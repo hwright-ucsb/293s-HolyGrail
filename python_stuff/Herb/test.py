@@ -22,13 +22,15 @@ class TestSpider(scrapy.Spider):
 
     def parse(self, response):
         r = response.url.split('/')
-        pprint (vars(response))
-        # tree = html.fromstring(response.content)
-        # kind = tree.xpath('//div[@id="submenu-current-page"]/text()')
-        # desc = response.xpath('normalize-space(//div[@class="et_monarch article-body"])')
-        # print "strain: ", r[-2]
-        # print "kind: ", kind
-        # print "desc: ", desc
+        #pprint (vars(response))
+        #tree = html.fromstring(response.content)
+        kind = response.xpath('normalize-space(//div[@id="submenu-current-page"])').extract()
+        kind = str(kind)[3:-2]
+        desc = response.xpath('normalize-space(//div[@class="et_monarch article-body"])').extract()
+        desc = str(desc)[3:-2]
+        print "strain: ", r[-2]
+        print "kind: ", kind
+        print "desc: ", desc
 
 
 

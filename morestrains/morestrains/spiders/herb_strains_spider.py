@@ -28,10 +28,12 @@ class Strains1Spider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
-        
-        strain_name = ""
-        kind = ""
-        desc = ""
+
+        strain_name = response.url.split('/')[-2]
+        kind = response.xpath('normalize-space(//div[@id="submenu-current-page"])').extract()
+        kind = str(kind)[3:-2]
+        desc = response.xpath('normalize-space(//div[@class="et_monarch article-body"])').extract()
+        desc = str(desc)[3:-2]
 
         yield {
             'strain': strain_name
