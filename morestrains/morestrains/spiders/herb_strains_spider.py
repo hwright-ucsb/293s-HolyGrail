@@ -1,8 +1,8 @@
 import scrapy
-from scrapy.selector import HtmlXPathSelector
-from scrapy.spider import BaseSpider
-from scrapy.http import Request
-from scrapy.linkextractors import LinkExtractor
+# from scrapy.selector import HtmlXPathSelector
+# from scrapy.spider import BaseSpider
+# from scrapy.http import Request
+# from scrapy.linkextractors import LinkExtractor
 import xml.etree.ElementTree
 
 # this spider gets strains from herb.co
@@ -35,10 +35,22 @@ class Strains1Spider(scrapy.Spider):
         desc = response.xpath('normalize-space(//div[@class="et_monarch article-body"])').extract()
         desc = str(desc)[3:-2]
 
+        effects = response.xpath('normalize-space(//div[@class="recipe-detail-ingredients-method-container"]/div[1])').extract()
+        effects = str(effects)[12:-2]
+
+        helps = response.xpath('normalize-space(//div[@class="recipe-detail-ingredients-method-container"]/div[16])').extract()
+        helps = str(helps)[12:-2]
+
+        neffects = response.xpath('normalize-space(//div[@class="recipe-detail-ingredients-method-container"]/div[19])').extract()
+        neffects = str(neffects)[22:-2]
+
         yield {
-            'strain': strain_name
-            'kind': kind
-            'description': desc
+            'strain': strain_name,
+            'kind': kind,
+            'description': desc,
+            'effects': effects,
+            'helps': helps,
+            'negative-effects': neffects,
         }
         
 
