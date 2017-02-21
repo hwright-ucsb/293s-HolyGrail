@@ -32,9 +32,12 @@ class WikileafStrainsSpider(scrapy.Spider):
         strain_name = response.url.split("/")[-2]
         kind = response.xpath('//div[@class="breadcumb"]').extract()[0].split("/")[-6]
         description = response.xpath('normalize-space(//div[@itemprop="description"])').extract()
+        usage_time = response.xpath('//div[@class="strain-time-icon"]//@alt').extract()[0]
+        parents = response.xpath('//div[@class="strain-side-box parent"]//li/a/text()').extract()
         thc_content = {
             'high': response.xpath('//div[@class="graph-val"]/text()').extract()[1],
-            'avg': response.xpath('//div[@class="graph-val"]/text()').extract()[2]
+            'avg': response.xpath('//div[@class="graph-val"]/text()').extract()[2],
+            'kind_percent': response.xpath('normalize-space(//div[@class="strain-type-text"]/text())').extract()[0],
         }
         medical_uses = {}
         effects = {}
@@ -45,8 +48,10 @@ class WikileafStrainsSpider(scrapy.Spider):
 
         yield {
             'strain': strain_name,
+            'parent_strains': parents,
             'kind': kind,
             'description': description,
+            'time_of_day': usage_time,
             'thc_content': thc_content,
             'medical_uses': medical_uses,
             'effects': effects,
