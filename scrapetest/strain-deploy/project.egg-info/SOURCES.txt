@@ -1,0 +1,16 @@
+MANIFEST.in
+setup.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
+test1/__init__.py
+test1/items.py
+test1/middlewares.py
+test1/pipelines.py
+test1/settings.py
+test1/strains.xml
+test1/spiders/__init__.py
+test1/spiders/reviews_spider.py
+test1/spiders/strains_spider.py
