@@ -40,13 +40,33 @@ class WikileafStrainsSpider(scrapy.Spider):
             sat_ind_ratio = response.xpath('normalize-space(//div[@id="details_product_sativa_indica"])').extract()
             sat_ind_ratio = str(sat_ind_ratio)[3:-2]
 
-            hasMed = response.xpath('normalize-space(//div[@id="details_overview"])').extract()
-            hasMed = str(hasMed)[3:-2]
+            # hasMed = response.xpath('normalize-space(//div[@id="details_overview"])').extract()
+            # hasMed = str(hasMed)[3:-2]
 
             medical_uses = "N/A"
-            if hasMed.startswith('Medicinal') or hasMed.startswith('medicinal'):
-                medical_uses = response.xpath('normalize-space(//div[@id="details_lineage"])').extract()
-                medical_uses = str(medical_uses)[3:-2]
+            lineage = "N/A"
+
+            for i in range(1,7):
+                try:
+                    xp = 'normalize-space(//div[@id="info_wrap"]/div[' + str(i) + '])'
+                    div = response.xpath(xp).extract()
+                    div = str(div)[3:-2]
+                    if div.startswith('Medicinal') or div.startswith('medicinal'):
+                        xp2 = 'normalize-space(//div[@id="info_wrap"]/div[' + str(i+1) + '])'
+                        medical_uses = response.xpath(xp2).extract()
+                        medical_uses = str(medical_uses)[3:-2]
+                    if div.startswith('Line') or div.startswith('line'):
+                        xp2 = 'normalize-space(//div[@id="info_wrap"]/div[' + str(i+1) + '])'
+                        lineage = response.xpath(xp2).extract()
+                        lineage = str(lineage)[3:-2]
+                except:
+                    pass
+
+            # if hasMed.startswith('Medicinal') or hasMed.startswith('medicinal'):
+            #     medical_uses = response.xpath('normalize-space(//div[@id="details_lineage"])').extract()
+            #     medical_uses = str(medical_uses)[3:-2]
+
+            # hasLineage = response.xpath('normalize-space(//div[@id="info_wrap"]/div[7])').extract()
 
             additional_info = response.xpath('normalize-space(//div[@id="reviews_wrap"]/p)').extract()
             additional_info = str(additional_info)[3:-2]
@@ -55,6 +75,7 @@ class WikileafStrainsSpider(scrapy.Spider):
                 'strain': strain,
                 'sat_ind_ratio': sat_ind_ratio,
                 'medical_uses': medical_uses,
+                'lineage': lineage,
                 'description': additional_info,
             }
 
