@@ -29,11 +29,33 @@ class StrainsSpider(scrapy.Spider):
 
         strain_name = response.url.split("/")[-1]
         kind = response.url.split("/")[-2]
+        attr_names = response.xpath('//div[@class="m-attr-label copy--sm"]/text()').extract()
+        attr_percents = response.xpath('//div[@class="m-attr-bar"]/@style').extract()
+        attributes = {}
+        parents = []
+        stars = response.xpath('//div[@class="copy-md--xxl"]//@star-rating').extract()
+        if len(stars) > 0:
+            stars = str(stars[0])
+        else:
+            stars = '-1'
+
+        for i in range(0, len(attr_names)):
+            attributes[str(attr_names[i])] = str(attr_percents[i]).split(':')[1].split('%')[0]
+        
+        raw_parents = response.xpath('//div[@class="strain__lineage strain__dataTab"]//li//@href').extract()
+
+        for i in range(0, len(raw_parents)):
+            parents.append(str(raw_parents[i].split('/')[2]))
+
+        
         
         yield {
             'strain': strain_name,
             'kind': kind,
+            'stars': stars,
             'description': response.xpath('normalize-space(//div[@itemprop="description"]//p)').extract(),
+            'attributes': attributes,
+            'parent_strains': parents,
         }
 
         #page = response.url.split("/")[-1]

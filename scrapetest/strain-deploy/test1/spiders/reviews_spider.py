@@ -26,14 +26,14 @@ class ReviewsSpider(scrapy.Spider):
 		bad_urls=open("bad_urls.txt", "w")
 		error_urls=[]
 
-		i=10000;
+		i=205000;
 		flag = False
 		while not flag:
 			url = dummy_url + str(i)
 			yield scrapy.Request(url=url, callback=self.parse)
 			i = i + 1
 
-			if i == 500000:
+			if i == 235000:
 				flag = True
 
 
