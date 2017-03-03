@@ -35,26 +35,35 @@ class WikileafStrainsSpider(scrapy.Spider):
         usage_time = response.xpath('//div[@class="strain-time-icon"]//@alt').extract()[0]
         parents = response.xpath('//div[@class="strain-side-box parent"]//li/a/text()').extract()
         thc_content = {
-            'high': response.xpath('//div[@class="graph-val"]/text()').extract()[1],
-            'avg': response.xpath('//div[@class="graph-val"]/text()').extract()[2],
-            'kind_percent': response.xpath('normalize-space(//div[@class="strain-type-text"]/text())').extract()[0],
+            'high_THC': response.xpath('//div[@class="graph-val"]/text()').extract()[1],
+            'avg_THC': response.xpath('//div[@class="graph-val"]/text()').extract()[2],
+            'kind': response.xpath('normalize-space(//div[@class="strain-type-text"]/text())').extract()[0],
         }
-        medical_uses = {}
-        effects = {}
+        attributes = {}
 
-        for i in range(0,5):
-            medical_uses[str(response.xpath('//div[@class="strain-bar"]/input/@id').extract()[i+3])] = str(response.xpath('//div[@class="strain-bar"]/input/@value').extract()[i+3])
-            effects[str(response.xpath('//div[@class="strain-bar"]/input/@id').extract()[i+8])] = str(response.xpath('//div[@class="strain-bar"]/input/@value').extract()[i+8])
+        stars = response.xpath('//span[@class="disp-rating"]/text()').extract()
+        if len(stars) > 0:
+            stars = str(stars[0])
+        else:
+            stars = '-1'
+
+        countries = response.xpath('//div[@class="strain-side-box country"]//li/text()').extract()
+        bars = response.xpath('//div[@class="strain-bar"]/input/@id').extract()
+
+        for i in range(0,len(bars)-3):
+            attributes[str(response.xpath('//div[@class="strain-bar"]/input/@id').extract()[i+3])] = str(response.xpath('//div[@class="strain-bar"]/input/@value').extract()[i+3])
+
 
         yield {
             'strain': strain_name,
             'parent_strains': parents,
+            'lineage': countries,
             'kind': kind,
+            'stars': stars,
             'description': description,
             'time_of_day': usage_time,
-            'thc_content': thc_content,
-            'medical_uses': medical_uses,
-            'effects': effects,
+            'percents': thc_content,
+            'attributes': attributes,
 
         }
 
