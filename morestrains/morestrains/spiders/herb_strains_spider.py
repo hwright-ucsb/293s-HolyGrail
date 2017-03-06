@@ -32,27 +32,42 @@ class Strains1Spider(scrapy.Spider):
         strain_name = response.url.split('/')[-2]
         kind = response.xpath('normalize-space(//div[@id="submenu-current-page"])').extract()
         kind = str(kind)[3:-2]
-        desc = response.xpath('normalize-space(//div[@class="et_monarch article-body"])').extract()
-        desc = str(desc)[3:-2]
+        if kind.lower() == ('indica' or 'sativa' or 'hybrids'):
 
-        effects = response.xpath('normalize-space(//div[@class="recipe-detail-ingredients-method-container"]/div[1])').extract()
-        effects = str(effects)[12:-2]
+            desc = response.xpath('normalize-space(//div[@class="et_monarch article-body"])').extract()
+            desc = str(desc)[3:-2]
 
-        helps = response.xpath('normalize-space(//div[@class="recipe-detail-ingredients-method-container"]/div[16])').extract()
-        helps = str(helps)[12:-2]
+            per = response.xpath('//div[@class="strain-data-table-data-row"]//span[@class="strain-item"]/text()').extract()
+            percents = {}
+            if len(percents) > 0:
+                percents['thc'] = str(per[0].split("%")[0])
+                percents['cbd'] = str(per[0].split("%")[1])
 
-        neffects = response.xpath('normalize-space(//div[@class="recipe-detail-ingredients-method-container"]/div[19])').extract()
-        neffects = str(neffects)[22:-2]
+            l_links = response.xpath('//div[@class="strain-lineage"]/a/text()').extract()
+            l_strings = response.xpath('//div[@class="strain-lineage"]/text()').extract() 
+            lineage = []
+            if (len(l_links) + len(l_strings)) > 0:
+                for s in l_links:
+                    lineage.append(str(s))
+                for s in l_strings:
+                    lineage.append(str(s))
 
-        yield {
-            'strain': strain_name,
-            'kind': kind,
-            'description': desc,
-            'effects': effects,
-            'helps': helps,
-            'negative-effects': neffects,
-        }
-        
+            attr_names1 = response.xpath('//div[@class="recipe-detail-method"]//h3/text()').extract()
+            attr_info1 = response.xpath('//div[@class="recipe-detail-method"]//div').extract() 
+            attr_names2 = response.xpath('//div[@class="recipe-detail-ingredients"]//h3/text()').extract()
+           # attr_info2 = 
+
+
+
+            yield {
+                'strain': strain_name,
+                'kind': kind,
+                'description': desc,
+                'effects': effects,
+                'helps': helps,
+                'negative-effects': neffects,
+            }
+            
 
 
 

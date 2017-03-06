@@ -13,15 +13,97 @@ class Source(Enum):
 
 strains = {}
 
-#def importHerb(file):
+def importHerb(file):
+	data = json.load(open(file))
+
+	for i in range(0, len(data)):
+		cur = data[i]
+		strain_name = splitHyphenatedStrain(cur["strain"])
+		kind_s = cur["kind"].lower()
+		if kind_s == "indica":
+			kind = populateKindManual(kind_s)
+		elif kind_s == "sativa":
+			kind = populateKindManual(kind_s)
+		elif kind_s == "hybrids":
+			kind = populateKindManual("hybrid")
+		attributes = {}
+		descr = cur["description"]
+
+		if strain_name not in strains:
+			initializeStrain(strain_name, source, kind, attributes, descr)
+		else:
+			addToStrain(strain_name, source, kind, attributes, descr)
+
+		print("Done importing Herb data")
 
 
+def importLeafly(file):
+	data = json.load(open(file))
 
-#def importLeafly(file):
+	for i in range(0, len(data)):
+		cur = data[i]
+		strain_name=splitHyphenatedStrain(cur["strain"])
+		kind = populateKindManual(cur["kind"])
+		source = Source.LEAFLY
+		attr_raw = cur["attributes"]
+		names = []
+		values = []
+		for name, value in attr_raw.iteritems():
+			names.append(name.lower())
+			values.append(float(value))
+
+		attributes = setAttributes(names, values)
+		descr = cur["description"]
+
+		if strain_name not in strains:
+			initializeStrain(strain_name, source, kind, attributes, descr)
+		else:
+			addToStrain(strain_name, source, kind, attributes, descr)
+
+	print("Done importing Leafly data")
 
 
+def importWikileaf(file):
+	data = json.load(open(file))
 
-#def importWikileaf(file):
+	for i in range(0, len(data)):
+		cur = data[i]
+		strain_name = splitHyphenatedStrain(cur["strain"])
+		kind_s = cur["kind"].lower()
+		percent_k = int(cur["percents"]["kind"].split("%")[0])
+		source = Source.WIKILEAF
+
+		if kind_s == "indica":
+			kind = populateKind(percent_k, (100-percent_k), 0)
+		elif kind_s == "hybrid":
+			kind = populateKind(50, 50, 0)
+		elif kind_s == "sativa":
+			kind = populateKind((100-percent_k), percent_k, 0)
+
+		attr_raw = cur["attributes"]
+		names = []
+		values = []
+		
+		for name, value in attr_raw.iteritems(): #format attributes correctly 
+			temp = name.split("avg_")[1].split("_")
+
+			if temp[0] == "cott":
+				temp[0] = "cotton"
+
+			temp_s = temp[0]
+			for z in range(1, len(temp)):
+				temp_s = temp_s + " " + temp[z]
+			names.append(temp_s)
+			values.append(int(value))
+
+		attributes = setAttributes(names, values)
+		descr = cur["description"]
+		if strain_name not in strains:
+			initializeStrain(strain_name, source, kind, attributes, descr)
+		else:
+			addToStrain(strain_name, source, kind, attributes, descr)
+
+	print("Done importing Wikileaf data")
 
 
 def importFourTwenty101(file):
@@ -35,6 +117,7 @@ def importFourTwenty101(file):
 		kind = populateKindManual(kind_s)				## kind percentages not given 
 		medical_uses = cur["medical_uses"].lower()
 		medical_uses = medical_uses.split(" ")
+
 		attributes = setAttributesManual(medical_uses)
 		source = Source.FOURTWENTY101
 		descr = cur["description"]
@@ -55,6 +138,11 @@ def importQannabis(file):
 		cur = data[i]
 		strain_name = cur["strain"].lower()
 		kind_s = cur["sat_ind_ratio"].split(" ")[2].split("/")
+
+		# lineage = cur["lineage"].lower()
+		# if len(lineage) == 1:							## wasn't split -- split now
+		# 	lineage = lineage[0].split(" x ")
+
 		flag = 0
 		try:
 			indica = int(kind_s[1])
@@ -67,19 +155,8 @@ def importQannabis(file):
 		if sativa == 0 and indica == 0:
 			flag = -1
 		kind = populateKind(indica, sativa, flag)
-		
 
-		# if len(kind_s[0]) > 0 and (kind_s[1]) > 0:
-		# 	kind = populateKind(int(kind_s[1]), int(kind_s[0]), 0) #indica first then sativa
-		# elif len(kind_s[0]) > 0 and (kind_s[1]) == 0:
-		# 	kind = populateKind(0, int(kind_s[0]), 0) 
-		# elif len(kind_s[0]) == 0 and (kind_s[1]) > 0:
-		# 	kind = populateKind(int(kind_s[1]), 0, 0) 
-		# else:
-		# 	kind = populateKind(0,0,-1)
-
-		medical_uses = cur["medical_uses"].lower()
-		medical_uses = medical_uses.split(", ")
+		medical_uses = [x.lower() for x in cur["medical_uses"]]
 		attributes = setAttributesManual(medical_uses)
 		source = Source.QANNABIS
 		descr = cur["description"]
@@ -105,7 +182,7 @@ def addToStrain(strain_name, source, kind, attributes, descr):
 									"description": descr})
 	#print(strains[strain_name])
 
-def populateKindManual(kind):
+def populateKindManual(kind): # automatically sets flag == 1
 	s = []
 	if kind == 'indica':
 		s.append(100)
@@ -120,7 +197,7 @@ def populateKindManual(kind):
 	s.append(1)
 	return s
 
-def populateKind(indica, sativa, flag):
+def populateKind(indica, sativa, flag): # be sure to set flag == 0
 	s = [indica, sativa, flag]
 	return s
 
@@ -138,13 +215,24 @@ def setAttributes(attr, values):
 
 	return s
 
+def splitHyphenatedStrain(strain):
+	strain_arr = strain.split("-")
+	s = strain_arr[0].lower()
+	for j in range(1, len(strain_arr)):
+			s = s + " " + strain_arr[j].lower()
+	return s
+
 def main():
 	importFourTwenty101('strains420101.json')
-	importQannabis('qannabis_strains.json')
+	importQannabis('qannabis_strains_fixed.json')
+	importWikileaf('wikileaf_strains_all.json')
+	importLeafly('leafly-fixed.json')
+	importHerb('herb_strains.json')
 
 	for k in strains.keys():
-		print(k +" " + str(len(strains[k])))
+		if len(strains[k]) > 2:
+			print(k +" " + str(len(strains[k])))
 
-	json.dump(strains, open('consol_strains.json', 'w'))
+	json.dump(strains, open('consol_strains-4.json', 'w'))
 main()
 
