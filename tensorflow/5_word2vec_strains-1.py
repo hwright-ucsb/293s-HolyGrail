@@ -227,7 +227,10 @@ if __name__ == '__main__':
                     nearest = (-sim[i, :]).argsort()[1:top_k+1]
                     log = 'Nearest to %s:' % valid_word
                     for k in range(top_k):
-                        close_word = reverse_dictionary[nearest[k]]
-                        log = '%s %s,' % (log, close_word)
+                        try:
+                            close_word = reverse_dictionary[nearest[k]]
+                            log = '%s %s,' % (log, close_word)
+                        except KeyError:
+                            print(" keyerror ")
                     print(log)
 #final_embeddings = normalized_embeddings.eval()
