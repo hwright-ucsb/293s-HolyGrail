@@ -217,4 +217,4 @@ if __name__ == '__main__':
                         close_word = reverse_dictionary[nearest[k]]
                         log = '%s %s,' % (log, close_word)
                     print(log)
-final_embeddings = normalized_embeddings.eval()
+#final_embeddings = normalized_embeddings.eval()
