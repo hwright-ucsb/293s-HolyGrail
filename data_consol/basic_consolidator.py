@@ -53,7 +53,7 @@ def importLeafly(file):
 			values.append(float(value))
 
 		attributes = setAttributes(names, values)
-		descr = cur["description"]
+		descr = cur["description"][0]
 
 		if strain_name not in strains:
 			initializeStrain(strain_name, source, kind, attributes, descr)
@@ -97,7 +97,7 @@ def importWikileaf(file):
 			values.append(int(value))
 
 		attributes = setAttributes(names, values)
-		descr = cur["description"]
+		descr = cur["description"][0]
 		if strain_name not in strains:
 			initializeStrain(strain_name, source, kind, attributes, descr)
 		else:
@@ -176,10 +176,11 @@ def initializeStrain(strain_name, source, kind, attributes, descr):
 
 
 def addToStrain(strain_name, source, kind, attributes, descr):
+	# only reason to encode to utf-8 is for hidden space unicode char
 	strains[strain_name].append({"source": source.name, 
-									"kind": kind, 
+									"kind": kind,
 									"attributes": attributes, 
-									"description": descr})
+									"description": descr.encode('utf-8').decode('unicode_escape').encode('ascii', 'ignore')})
 	#print(strains[strain_name])
 
 def populateKindManual(kind): # automatically sets flag == 1
