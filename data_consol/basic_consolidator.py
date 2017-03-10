@@ -1,6 +1,6 @@
 from enum import Enum
 import json
-
+import re
 
 class Source(Enum):
 	HERB = 1
@@ -174,14 +174,38 @@ def initializeStrain(strain_name, source, kind, attributes, descr):
 	strains[strain_name] = []
 	addToStrain(strain_name, source, kind, attributes, descr)
 
+def removeUnicode(descr):
+	#a mismatch of unicode in hex and usyntax
+	noUni = descr.encode('utf-8')\
+	.replace("\\x92", "'")\
+	.replace("\\", '')\
+	.replace("\xe2\x80\x99", "'")\
+	.replace("\xc2\xa0", ' ')\
+	.replace("x93", '"')\
+	.replace("x94", '"')\
+	.replace("u2019", "'")\
+	.replace("u201c", '"')\
+	.replace("u201d", '"')\
+	.replace("u2028", "\n")
+
+	#for things like that's or she'll
+	noUni = re.sub(r'([^ ])\?([^ ])', r"\1'\2", noUni)
+
+	#for things in quotes like ?Oriental Thai blah..?
+	noUni = re.sub(r'[ ]\?(.*?)\?[ ]', r' "\1" ', noUni)
+
+	#I'm too lazy to figure out which desc thats from but
+	#I'll assume its supposed to be a ' char
+	noUni = re.sub('Sage N? Sour OG', "Sage N' Sour OG", noUni)
+
+	return noUni
 
 def addToStrain(strain_name, source, kind, attributes, descr):
-	# only reason to encode to utf-8 is for hidden space unicode char
 	strains[strain_name].append({"source": source.name, 
 									"kind": kind,
 									"attributes": attributes, 
-									"description": descr.encode('utf-8').decode('unicode_escape').encode('ascii', 'ignore')})
-	#print(strains[strain_name])
+									"description": removeUnicode(descr)})
+	# print(strains[strain_name])
 
 def populateKindManual(kind): # automatically sets flag == 1
 	s = []
