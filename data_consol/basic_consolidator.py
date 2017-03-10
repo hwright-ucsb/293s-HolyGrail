@@ -20,6 +20,7 @@ def importHerb(file):
 		cur = data[i]
 		strain_name = splitHyphenatedStrain(cur["strain"])
 		kind_s = cur["kind"].lower()
+		source = Source.HERB
 		if kind_s == "indica":
 			kind = populateKindManual(kind_s)
 		elif kind_s == "sativa":
@@ -54,6 +55,9 @@ def importLeafly(file):
 
 		attributes = setAttributes(names, values)
 		descr = cur["description"][0]
+		if len(descr) > 1:
+			print(strain_name)
+			print(descr)
 
 		if strain_name not in strains:
 			initializeStrain(strain_name, source, kind, attributes, descr)
@@ -98,6 +102,9 @@ def importWikileaf(file):
 
 		attributes = setAttributes(names, values)
 		descr = cur["description"][0]
+		if len(descr) > 1:
+			print(descr)
+			print(strain_name)
 		if strain_name not in strains:
 			initializeStrain(strain_name, source, kind, attributes, descr)
 		else:
@@ -180,7 +187,7 @@ def addToStrain(strain_name, source, kind, attributes, descr):
 	strains[strain_name].append({"source": source.name, 
 									"kind": kind,
 									"attributes": attributes, 
-									"description": descr.encode('utf-8').decode('unicode_escape').encode('ascii', 'ignore')})
+									"description": descr.replace("\u00a0"," ").encode('utf-8').decode('unicode_escape').encode('ascii', 'ignore')})
 	#print(strains[strain_name])
 
 def populateKindManual(kind): # automatically sets flag == 1
@@ -228,12 +235,12 @@ def main():
 	importQannabis('qannabis_strains_fixed.json')
 	importWikileaf('wikileaf_strains_all.json')
 	importLeafly('leafly-fixed.json')
-	importHerb('herb_strains.json')
+	#importHerb('herb_strains.json')
 
-	for k in strains.keys():
-		if len(strains[k]) > 2:
-			print(k +" " + str(len(strains[k])))
+	#for k in strains.keys():
+		#if len(strains[k]) > 2:
+		#	print(k +" " + str(len(strains[k])))
 
-	json.dump(strains, open('consol_strains-4.json', 'w'))
+	json.dump(strains, open('consol_strains-5.json', 'w'))
 main()
 

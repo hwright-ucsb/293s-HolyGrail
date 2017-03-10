@@ -12,6 +12,7 @@ import random
 import tensorflow as tf
 #import zipfile
 import json
+import string
 
 from six.moves import range
 from six.moves.urllib.request import urlretrieve
@@ -45,17 +46,20 @@ def read_data(filename):
         temp = []
         for i in range(0, len(entries)):
             cur = entries[i]
-            descr = str(cur["description"])
+            descr = str(cur["description"]).lower()
+            descr = descr.replace("'", "").replace("`", "").replace("-", " ").replace(".", " ").replace(",", " ")
+            descr = descr.translate(None, string.punctuation)
+            #print(descr)
             temp.extend(tf.compat.as_str(descr).split(" "))
         data.extend(temp)
 
     return data
 
-filename = 'consol_strains-3.json'
+filename = 'consol_strains-5.json'
 words = read_data(filename)
 print('Data size %d' % len(words))
-
-vocabulary_size = 50000
+#656104
+vocabulary_size = 20000
 
 def build_dataset(words):
     # UNK token is used to denote words that are not in the dictionary
@@ -152,7 +156,7 @@ if __name__ == '__main__':
     # We pick a random validation set to sample nearest neighbors. here we limit the
     # validation samples to the words that have a low numeric ID, which by
     # construction are also the most frequent.
-    valid_size = 16 # Random set of words to evaluate similarity on.
+    valid_size = 24 # Random set of words to evaluate similarity on.
     valid_window = 100 # Only pick dev samples in the head of the distribution.
     # pick 16 samples from 100
     valid_examples = np.array(random.sample(range(valid_window), valid_size//2))
