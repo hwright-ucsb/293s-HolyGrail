@@ -1,5 +1,7 @@
 import json, re
 
+cnt = 0
+notcnt =0
 strains = set()
 strainfile = "unique_strains.txt"
 f = open(strainfile,"r")
@@ -36,13 +38,17 @@ def removeUnicode(s):
 
 def printNoStrain(file):
 	data = json.load(open(file))
-
+	global cnt, notcnt
 	for i in range(len(data)):
 		cur = data[i]
 		strain_name = cur["strain"]
 		strain_name = strain_name.replace("-"," ")
 		if strain_name not in strains:
+			cnt = cnt+1
 			print "FOUND:", strain_name
+		else:
+			notcnt = notcnt+1
+	
 
 
 printNoStrain("json/leafly-reviews-1.json")
@@ -59,3 +65,5 @@ printNoStrain("json/leafly-reviews-11.json")
 printNoStrain("json/leafly-reviews-12.json")
 printNoStrain("json/leafly-reviews-13.json")
 printNoStrain("json/leafly-reviews-14.json")
+print(cnt)
+print(notcnt)
