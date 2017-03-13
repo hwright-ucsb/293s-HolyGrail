@@ -46,7 +46,7 @@ def tokenize_only(text):
 	# strains = json.load(open('consol_strains-3.json'))
 	# stopwords = nltk.corpus.stopwords.words('english')
 	# stemmer = SnowballStemmer("english")
-strains = json.load(open('consol_strains-3.json'))
+strains = json.load(open('../data_consol/consol_strains-5.json'))
 stopwords = nltk.corpus.stopwords.words('english')
 stemmer = SnowballStemmer("english")
 totalvocab_stemmed = []
@@ -129,8 +129,13 @@ dist = 1 - cosine_similarity(tfidf_matrix)
 
 linkage_matrix = ward(dist) #define the linkage_matrix using ward clustering pre-computed distances
 
-fig, ax = plt.subplots(figsize=(50, 66)) # set size
-ax = dendrogram(linkage_matrix, orientation="right", labels=strain_names);
+
+fig, ax = plt.subplots(figsize=(100, 125)) # set size
+ax = dendrogram(linkage_matrix, orientation="right", labels=strain_names, leaf_font_size=3, show_leaf_counts=True);
+temp = {'labels': ax['ivl'],
+        'leaves': ax['leaves']}
+json.dump(temp, open('leaves.json', 'w'))
+json.dump(strain_names, open('strain_names.json', 'w'))
 
 plt.tick_params(\
     axis= 'x',          # changes apply to the x-axis
@@ -142,7 +147,7 @@ plt.tick_params(\
 plt.tight_layout() #show plot with tight layout
 
 #uncomment below to save figure
-plt.savefig('ward_clusters-2.png', dpi=200) #save figure as ward_clusters
+plt.savefig('ward_clusters-5-cnt.png', dpi=200) #save figure as ward_clusters
 plt.close()
 
 

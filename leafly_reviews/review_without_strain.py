@@ -45,7 +45,7 @@ def printNoStrain(file):
 		strain_name = strain_name.replace("-"," ")
 		if strain_name not in strains:
 			cnt = cnt+1
-			print "FOUND:", strain_name
+			#print "FOUND:", strain_name
 		else:
 			notcnt = notcnt+1
 	
