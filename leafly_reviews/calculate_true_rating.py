@@ -37,8 +37,30 @@ def calcRating(strain, star_ratings, attr_from_src, attr_in_review, num_reviews)
 
 	# get percentage of each attribute				
 	attributes = {}
-	for key in attr_in_review:
-		attributes[key] = attr_in_review[key]/float(num_reviews)
+	for src in attr_in_review:
+		if src not in attr_from_src:
+			# DISCREPANCY deal with this later
+			pass
+		attributes[src] = attr_in_review[src]/float(num_reviews)
+
+	# convert list of values into their avg
+	for a in attr_value:
+		attr_value[a] = sum(attr_value[a])/float(len(attr_value[a]))
+
+	# there are attributes from info that arent in review
+	for src in attr_from_src:
+		if src not in attr_in_review:
+			# DISCREPANCY
+			pass
+
+	# add attributes from info to final attribute dictionary
+	for a in attr_value:
+		if a in attributes:
+			# both info and review had this attr - compare them later????
+			attributes[a] = (attributes[a] + attr_value[a]) / 2.0 # just do avg
+		else:
+			# info had this attr but review didnt
+			attributes[a] = attr_value[a]
 
 	strain_rating[strain] = {'avg': avg_star,
 							 'attributes': attributes}
@@ -55,11 +77,9 @@ for strain_name in data:
 	rev = obj['reviews']
 
 	attr_from_src = {}
-	attr = {}
 	for i in info:
-		if i['source'] != 'FOURTWENTY101':
+		if i['source'] == 'LEAFLY' or i['source'] == 'WIKILEAF':
 			attr_from_src[i['source']] = i['attributes']
-			attr = i['attributes']
 
 	star_ratings = []
 	attr_in_review = {} # attribute info can be found in both the info AND reviews
@@ -79,6 +99,13 @@ for strain_name in data:
 			else:
 				attr_in_review[a] = 1
 
+	# print attr_from_src
+	for src in attr_from_src:
+		for a in attr_from_src[src]:
+			# print attr_from_src[src][a]
+			attr_from_src[src][a] = float(attr_from_src[src][a]) / float(100)
+
+	# print attr_from_src
 	num_reviews = len(rev)
 
 	calcRating(strain_name, star_ratings, attr_from_src, attr_in_review, num_reviews)
