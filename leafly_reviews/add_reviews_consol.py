@@ -56,9 +56,9 @@ strain_json = json.load(open('consol_strains-5.json'))
 for strain_name, entry in strain_json.iteritems():
 	if strain_name in reviews:
 		strains[strain_name] = { "reviews": reviews[strain_name],
-								 "info": entry}
+								 "info": entry }
 	else:
 		strains[strain_name] = { "reviews": [],
-								 "info": entry}
+								 "info": entry }
 
 json.dump(strains, open('strains_reviews-2.json', 'w'))
