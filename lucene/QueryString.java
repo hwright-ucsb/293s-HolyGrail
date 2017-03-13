@@ -26,37 +26,46 @@ public class QueryString {
         // the first arg specifies the default field to use
         // when no field is explicitly specified in the query.
         Scanner sc = new Scanner(System.in);
-        System.out.println("\nWhich field would you like to query? (Searches title by default.)");
-        System.out.println("\tEnter 1 for DOC ID");
-        System.out.println("\tEnter 2 for BODY");
-        System.out.println("\tEnter anything else for TITLE");
+        // System.out.println("\nWhich field would you like to query? (Searches title by default.)");
+        // System.out.println("\tEnter 1 for DOC ID");
+        // System.out.println("\tEnter 2 for BODY");
+        // System.out.println("\tEnter anything else for TITLE");
 
-        int fieldCode = sc.nextInt();
-        sc.nextLine();
+        // int fieldCode = sc.nextInt();
+        int fieldCode = 1;
+        // sc.nextLine();
         Query q;
-        if(fieldCode==1){
-            q = new QueryParser("docID", analyzer).parse(querystr);
-        }
-        else if(fieldCode==2){
-            q = new QueryParser("body", analyzer).parse(querystr);
-        }
-        else{
-            q = new QueryParser("title",analyzer).parse(querystr);
-        }
+        IndexReader reader = null;
 
-        // 3. search
-        int hitsPerPage = 10;
-        IndexReader reader = DirectoryReader.open(index);
-        IndexSearcher searcher = new IndexSearcher(reader);
-        TopDocs docs = searcher.search(q, hitsPerPage);
-        ScoreDoc[] hits = docs.scoreDocs;
+        
+        while(!querystr.equals("exit")) {
+            System.out.println("Please Enter a query String!");
+            querystr = sc.nextLine();
 
-        // 4. display results
-        System.out.println("Found " + hits.length + " hits.");
-        for(int i=0;i<hits.length;++i) {
-            int docId = hits[i].doc;
-            Document d = searcher.doc(docId);
-            System.out.println((i + 1) + ". " + d.get("docID") + "\t" + d.get("title"));
+            if(fieldCode==1){
+                q = new QueryParser("both", analyzer).parse(querystr);
+            }
+            else if(fieldCode==2){
+                q = new QueryParser("body", analyzer).parse(querystr);
+            }
+            else{
+                q = new QueryParser("title",analyzer).parse(querystr);
+            }
+
+                    // 3. search
+            int hitsPerPage = 10;
+            reader = DirectoryReader.open(index);
+            IndexSearcher searcher = new IndexSearcher(reader);
+            TopDocs docs = searcher.search(q, hitsPerPage);
+            ScoreDoc[] hits = docs.scoreDocs;
+
+            // 4. display results
+            System.out.println("Found " + hits.length + " hits.");
+            for(int i=0;i<hits.length;++i) {
+                int docId = hits[i].doc;
+                Document d = searcher.doc(docId);
+                System.out.println((i + 1) + ". " + "\t" + d.get("title") + "\n" + d.get("body") + "\n");
+            }
         }
 
         // reader can only be closed when there
