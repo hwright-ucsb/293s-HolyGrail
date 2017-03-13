@@ -1,6 +1,11 @@
 from enum import Enum
 import json
 import re
+import scipy
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# will need to install these for text similarity
+# https://shanshanchen.com/2013/05/29/install-numpy-scipy-scikit-learn-on-mac-os-x-for-data-miners/
 
 class Source(Enum):
 	HERB = 1
@@ -12,6 +17,8 @@ class Source(Enum):
 
 
 strains = {}
+descriptions = {}
+similarities = {}
 
 def importHerb(file):
 	data = json.load(open(file))
@@ -179,6 +186,7 @@ def importQannabis(file):
 
 def initializeStrain(strain_name, source, kind, attributes, descr):
 	strains[strain_name] = []
+	descriptions[strain_name] = []
 	addToStrain(strain_name, source, kind, attributes, descr)
 
 def removeUnicode(descr):
@@ -208,6 +216,7 @@ def removeUnicode(descr):
 	return noUni
 
 def addToStrain(strain_name, source, kind, attributes, descr):
+	descriptions[strain_name].append(removeUnicode(descr))
 	strains[strain_name].append({"source": source.name, 
 									"kind": kind,
 									"attributes": attributes, 
@@ -253,6 +262,14 @@ def splitHyphenatedStrain(strain):
 			s = s + " " + strain_arr[j].lower()
 	return s
 
+def computeDescriptionTfidf():
+	for strain in descriptions.keys():
+		if len(descriptions[strain]) > 1:
+			vect = TfidfVectorizer(min_df=1)
+			tfidf = vect.fit_transform(descriptions[strain])
+			similarities[strain] = (tfidf * tfidf.T).A
+
+
 def main():
 	importFourTwenty101('strains420101.json')
 	importQannabis('qannabis_strains_fixed.json')
@@ -260,9 +277,12 @@ def main():
 	importLeafly('leafly-fixed.json')
 	#importHerb('herb_strains.json')
 
-	#for k in strains.keys():
-		#if len(strains[k]) > 2:
-		#	print(k +" " + str(len(strains[k])))
+	computeDescriptionTfidf()
+	# print(similarities)
+
+	# for k in strains.keys():
+	# 	if len(strains[k]) > 2:
+	# 		print(k +" " + str(len(strains[k])))
 
 	json.dump(strains, open('consol_strains-5.json', 'w'))
 main()
