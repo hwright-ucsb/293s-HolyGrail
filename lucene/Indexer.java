@@ -12,8 +12,14 @@ import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.index.IndexWriterConfig;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import org.json.simple.*;
+import org.json.simple.parser.*;
+import java.util.Iterator;
 
 public class Indexer {
+    public static void print(String s){
+        System.out.println(s);
+    }
     public static void main(String[] args) throws IOException {
         int NUM_FILES = args.length > 0 ? Integer.parseInt(args[0]) : 100;
 
@@ -28,28 +34,39 @@ public class Indexer {
 
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
         config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
+        JSONParser parser = new JSONParser();
 
         IndexWriter w = new IndexWriter(index, config);
-        BufferedReader br = new BufferedReader(new FileReader("lines-trec45.txt"));
+        JSONObject o;
+        try{
+            o = (JSONObject)parser.parse(new FileReader("consol_strains.json"));
+        } catch(Exception e) {
+            e.printStackTrace();
+            return;
+        }
         String line;
         String[] stuff;
-        while((line = br.readLine()) != null){
-            stuff = line.split("\t");
-            if(stuff.length == 1){
-                addDoc(w,stuff[0],"","");
+        Iterator<?> keys = o.keySet().iterator();
+        String desc;
+
+        while( keys.hasNext() ) {
+            String strain_name = (String)keys.next();
+            desc = strain_name;
+            JSONArray strain_array = (JSONArray) o.get(strain_name);
+            int i = 0;
+            for(Object obj : strain_array) {
+                i++;
+                JSONObject jsobj = (JSONObject)obj;
+                desc = desc + "\n" + "Description " + i + "." + jsobj.get("description").toString();
             }
-            else if(stuff.length == 2){
-                addDoc(w,stuff[0],stuff[1],"");
-            }else{
-                addDoc(w,stuff[0],stuff[1],stuff[2]); 
-            }
+
+            addDoc(w, strain_name, desc);
         }
 
-        br.close();
         w.close();
     }
 
-    private static void addDoc(IndexWriter w, String docID, String title, String body) throws IOException {
+    private static void addDoc(IndexWriter w, String title, String body) throws IOException {
         // 488473549 Jan 18 17:50 lines-trec45.txt.gz
         // This file has the same content as trec-disk4-5.xml except that
         // the XML data is  stripped to plaintext.
@@ -58,9 +75,9 @@ public class Indexer {
         // between the first and second tab -->  the title,
         // after the second tab --> the body of the document
         Document doc = new Document();
-        doc.add(new StringField("docID", docID, Field.Store.YES));
         doc.add(new TextField("title", title, Field.Store.YES));
         doc.add(new TextField("body", body, Field.Store.YES));
+        doc.add(new TextField("both", title + " " + body, Field.Store.YES));
         w.addDocument(doc);
     }
 }
