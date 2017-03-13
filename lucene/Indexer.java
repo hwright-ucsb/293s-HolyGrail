@@ -17,6 +17,49 @@ import org.json.simple.parser.*;
 import java.util.Iterator;
 
 public class Indexer {
+    public static String stemWords(String textFile) {
+        CharArraySet stopWords = EnglishAnalyzer.getDefaultStopSet();
+        StandardTokenizer tokenStream = new StandardTokenizer();
+        Reader targetReader = new StringReader(textFile.trim());
+        tokenStream.setReader(targetReader);
+
+        StringBuilder sb = new StringBuilder();
+        CharTermAttribute charTermAttribute = tokenStream.addAttribute(CharTermAttribute.class);
+        try{
+          tokenStream.reset();
+        }catch(IOException e){
+          e.printStackTrace();
+        }
+        PorterStemmer stemmer = new PorterStemmer();
+        
+        boolean tok = false;
+
+        try{
+            tok = tokenStream.incrementToken();
+        }catch(IOException e){
+          e.printStackTrace();
+        }
+
+        while (tok) {
+            String term = charTermAttribute.toString();
+            
+            stemmer.setCurrent(term);
+            stemmer.stem();
+            String current = stemmer.getCurrent();
+
+            sb.append(current + " ");
+
+            
+            try {
+                tok = tokenStream.incrementToken();
+            } catch(IOException e){
+                e.printStackTrace();
+            }
+
+        }
+        return sb.toString();
+    }
+    
     public static void print(String s){
         System.out.println(s);
     }
