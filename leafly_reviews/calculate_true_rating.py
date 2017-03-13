@@ -35,17 +35,13 @@ def calcRating(strain, star_ratings, attr_from_src, attr_in_review, num_reviews)
 				else:
 					attr_count[a] += 1
 
-	# NOTE: since some strains have so many reviews,
-	# the values in attr_review may be skewed heavily.
-	# the values are the percentage of reviews that
-	# mention that attribute
+	# get percentage of each attribute				
+	attributes = {}
+	for key in attr_in_review:
+		attributes[key] = attr_in_review[key]/float(num_reviews)
+
 	strain_rating[strain] = {'avg': avg_star,
-							 'attr_value': attr_value,
-							 'attr_count': attr_count,
-							 'attr_review': attr_in_review,
-							 'num_reviews': num_reviews }
-
-
+							 'attributes': attributes}
 
 
 
