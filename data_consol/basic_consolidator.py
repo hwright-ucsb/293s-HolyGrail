@@ -1,6 +1,11 @@
 from enum import Enum
 import json
 import re
+import scipy
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# will need to install these for text similarity
+# https://shanshanchen.com/2013/05/29/install-numpy-scipy-scikit-learn-on-mac-os-x-for-data-miners/
 
 class Source(Enum):
 	HERB = 1
@@ -12,6 +17,10 @@ class Source(Enum):
 
 
 strains = {}
+descriptions = {}
+similarities = {}
+null = 0
+dup = 0
 
 def importHerb(file):
 	data = json.load(open(file))
@@ -55,9 +64,9 @@ def importLeafly(file):
 
 		attributes = setAttributes(names, values)
 		descr = cur["description"][0]
-		if len(descr) > 1:
-			print(strain_name)
-			print(descr)
+		# if len(descr) > 1:
+		# 	print(strain_name)
+		# 	print(descr)
 
 		if strain_name not in strains:
 			initializeStrain(strain_name, source, kind, attributes, descr)
@@ -102,9 +111,9 @@ def importWikileaf(file):
 
 		attributes = setAttributes(names, values)
 		descr = cur["description"][0]
-		if len(descr) > 1:
-			print(descr)
-			print(strain_name)
+		# if len(descr) > 1:
+		# 	print(descr)
+		# 	print(strain_name)
 		if strain_name not in strains:
 			initializeStrain(strain_name, source, kind, attributes, descr)
 		else:
@@ -179,6 +188,7 @@ def importQannabis(file):
 
 def initializeStrain(strain_name, source, kind, attributes, descr):
 	strains[strain_name] = []
+	descriptions[strain_name] = []
 	addToStrain(strain_name, source, kind, attributes, descr)
 
 def removeUnicode(descr):
@@ -207,7 +217,39 @@ def removeUnicode(descr):
 
 	return noUni
 
+def countNull(descr):
+	if(removeUnicode(descr) == ""):
+		global null
+		null+=1
+
+def countDup():
+	for i in similarities:
+		size = len(similarities[i])
+		count = 0
+		index = 0
+		# prin = False
+		for j in similarities[i]:
+			count += sum(k > .7 for k in list(j))
+			# if sum(k > .7 for k in list(j)) > 1:
+			# 	print(j)
+			# 	print(str(index) + ". " + descriptions[i][index])
+			# 	print("\n")
+			# 	prin = True	
+			# index+=1
+
+		# if prin:
+		# 	print("------------\n")
+		# 	print("\n")
+
+		count = max(count, 0)
+		global dup
+		dup += ((count - size) / 2)
+
+	
+
 def addToStrain(strain_name, source, kind, attributes, descr):
+	countNull(descr)
+	descriptions[strain_name].append(removeUnicode(descr))
 	strains[strain_name].append({"source": source.name, 
 									"kind": kind,
 									"attributes": attributes, 
@@ -253,17 +295,32 @@ def splitHyphenatedStrain(strain):
 			s = s + " " + strain_arr[j].lower()
 	return s
 
+def computeDescriptionTfidf():
+	for strain in descriptions.keys():
+		if len(descriptions[strain]) > 1:
+			vect = TfidfVectorizer(min_df=1)
+			tfidf = vect.fit_transform(descriptions[strain])
+			similarities[strain] = (tfidf * tfidf.T).A
+
+
 def main():
 	importFourTwenty101('strains420101.json')
 	importQannabis('qannabis_strains_fixed.json')
 	importWikileaf('wikileaf_strains_all.json')
 	importLeafly('leafly-fixed.json')
 	#importHerb('herb_strains.json')
+	print("Null is " + str(null))
+	
 
-	#for k in strains.keys():
-		#if len(strains[k]) > 2:
-		#	print(k +" " + str(len(strains[k])))
+	computeDescriptionTfidf()
+	countDup()
+	print("Duplicates is " + str(dup))
+	# print(similarities)
 
-	json.dump(strains, open('consol_strains-5.json', 'w'))
+	# for k in strains.keys():
+	# 	if len(strains[k]) > 2:
+	# 		print(k +" " + str(len(strains[k])))
+
+	# json.dump(strains, open('consol_strains-5.json', 'w'))
 main()
 
