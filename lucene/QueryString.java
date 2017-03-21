@@ -10,6 +10,7 @@ import java.nio.file.*;
 import java.nio.file.*;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Set;
 import java.util.Scanner;
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.core.StopFilter;
@@ -28,10 +29,11 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.ParseException;
-import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.queryparser.classic.*;
 import org.apache.lucene.search.*;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
+import org.apache.lucene.search.BoostQuery;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.similarities.*;
 import org.apache.lucene.search.TopDocs;
@@ -42,9 +44,10 @@ import org.apache.lucene.util.Version;
 import org.json.simple.*;
 import org.json.simple.parser.*;
 import org.tartarus.snowball.ext.PorterStemmer;
+import org.apache.lucene.search.BooleanClause.Occur;
 
 public class QueryString {
-	public static String removeStopWordsAndStem(String textFile) {
+	public static String removeStopWordsAndStem(String textFile, boolean stem) {
 		CharArraySet stopWords = EnglishAnalyzer.getDefaultStopSet();
 		StandardTokenizer tokenStream = new StandardTokenizer();
 		Reader targetReader = new StringReader(textFile.trim());
@@ -71,10 +74,14 @@ public class QueryString {
 
 		while (tok) {
 			String term = charTermAttribute.toString();
-			
-			stemmer.setCurrent(term);
-			stemmer.stem();
-			String current = stemmer.getCurrent();
+			String current;
+			if(stem) {
+				stemmer.setCurrent(term);
+				stemmer.stem();
+				current = stemmer.getCurrent();
+			} else {
+				current = term;
+			}
 
 			sb.append(current + " ");
 
@@ -110,36 +117,116 @@ public class QueryString {
 		int fieldCode = 1;
 		// sc.nextLine();
 		Query q;
+		BooleanQuery.Builder totalQuery = new BooleanQuery.Builder();
+		MultiFieldQueryParser conjunctiveParser;
+		QueryParser queryParser;
 		IndexReader reader = null;
+		JSONObject o;
+		JSONParser parser = new JSONParser();
+		try{
+            o = (JSONObject)parser.parse(new FileReader("consol_strains.json"));
+        } catch(Exception e) {
+            e.printStackTrace();
+            return;
+        }
+        String line;
+        String[] stuff;
 
-		
+        String oldQuery;
+        String oldQueryStopRemoved;
+
+        Set<String> strains = o.keySet();
+        // System.out.println(strains);
 		while(!querystr.equals("exit")) {
-			System.out.println("Please Enter a query String!");
-			querystr = sc.nextLine();
+			System.out.println("Please Enter a query String!\n\n\n\n");
+			oldQuery = sc.nextLine();
+			querystr = removeStopWordsAndStem(oldQuery, false);
+			oldQueryStopRemoved = removeStopWordsAndStem(oldQuery, false);
 
-			if(fieldCode==1){
-				q = new QueryParser("both", analyzer).parse(querystr);
-			}
-			else if(fieldCode==2){
-				q = new QueryParser("body", analyzer).parse(querystr);
-			}
-			else{
-				q = new QueryParser("title",analyzer).parse(querystr);
-			}
+			System.out.println("\n");
+			System.out.println("Your Query: " + oldQuery);
 
-					// 3. search
+			// if(fieldCode==1){
+			// 	queryParser = new QueryParser("both", analyzer).parse(querystr);
+			// 	// conjunctiveParser = new MultiFieldQueryParser("both", analyzer);
+   //  //     		conjunctiveParser.setDefaultOperator(QueryParser.Operator.AND);
+			// }
+			// else if(fieldCode==2){
+			// 	queryParser = new QueryParser("body", analyzer).parse(querystr);
+			// 	// conjunctiveParser = new MultiFieldQueryParser("body", analyzer);
+   //  //    			conjunctiveParser.setDefaultOperator(QueryParser.Operator.AND);
+			// }
+			// else{
+			// 	queryParser = new QueryParser("title",analyzer).parse(querystr);
+			// 	// conjunctiveParser = new MultiFieldQueryParser("title", analyzer);
+   //  //     		conjunctiveParser.setDefaultOperator(QueryParser.Operator.AND);
+			// }
+
+			String[] fields = new String[2];
+			fields[0] = "title_stem";
+			fields[1] = "body_stem";
+			HashMap<String,Float> boosts = new HashMap<String,Float>();
+			boosts.put("title_stem", 2f);
+			boosts.put("body_stem", 1f);
+
+			int j= 0;
+
+			String tmp = oldQueryStopRemoved;
+			for(String strain : strains) {
+				if(tmp.contains(strain)) {
+					tmp = tmp.replace(strain, "");
+					conjunctiveParser = new MultiFieldQueryParser(fields, analyzer, boosts);
+					conjunctiveParser.setDefaultOperator(QueryParser.Operator.AND);
+		    		q = conjunctiveParser.parse(strain);
+					BoostQuery boost = new BoostQuery(q, 0.8f);
+					totalQuery.add(boost, Occur.MUST);
+					// System.out.println("Query " + Integer.toString(j) + ": " + strain);
+					j++;
+				}
+			}
+    		// System.out.println("Query " + Integer.toString(j) + ": " + tmp);
+    		//if no strain, just do it normally
+    		if(!tmp.trim().equals("")) {
+    			conjunctiveParser = new MultiFieldQueryParser(fields, analyzer);
+    			conjunctiveParser.setDefaultOperator(QueryParser.Operator.OR);
+    			q = conjunctiveParser.parse(tmp);
+    			BoostQuery boost = new BoostQuery(q, 0.1f);
+    			totalQuery.add(boost, Occur.SHOULD);
+    		}
+
 			int hitsPerPage = 10;
 			reader = DirectoryReader.open(index);
 			IndexSearcher searcher = new IndexSearcher(reader);
-			TopDocs docs = searcher.search(q, hitsPerPage);
+			
+			
+
+
+			TopDocs docs = searcher.search(totalQuery.build(), hitsPerPage);
 			ScoreDoc[] hits = docs.scoreDocs;
 
 			// 4. display results
-			System.out.println("Found " + hits.length + " hits.");
+			if(hits.length == 0)
+				System.out.println("Sorry, " + hits.length + " hits found for " + oldQuery + ".");
 			for(int i=0;i<hits.length;++i) {
 				int docId = hits[i].doc;
 				Document d = searcher.doc(docId);
-				System.out.println((i + 1) + ". " + "\t" + d.get("title") + "\n" + d.get("body") + "\n");
+				String formattedTitle = d.get("title");
+				String formattedBody = d.get("body");
+
+				String[] l;
+				if(oldQueryStopRemoved.contains(" "))
+					l = oldQueryStopRemoved.split(" ");
+				else {
+					l = new String[1];
+					l[0] = oldQueryStopRemoved;
+				}
+				for(String s : l) {
+					formattedTitle = formattedTitle.replaceAll("((?i)" + s + ")", "\033[1;31m" + "$1" + "\033[0m");
+					formattedBody = formattedBody.replaceAll("((?i)" + s + ")", "\033[1;31m" + "$1" + "\033[0m");
+				}
+
+
+				System.out.println((i + 1) + ". " + "\t" + formattedTitle + "\n" + formattedBody + "\n");
 			}
 		}
 

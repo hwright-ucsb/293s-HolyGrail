@@ -119,13 +119,13 @@ public class Indexer {
 
         while( keys.hasNext() ) {
             String strain_name = (String)keys.next();
-            desc = strain_name;
+            desc = "";
             JSONArray strain_array = (JSONArray) o.get(strain_name);
             int i = 0;
             for(Object obj : strain_array) {
                 i++;
                 JSONObject jsobj = (JSONObject)obj;
-                desc = desc + "\n" + "Description " + i + "." + jsobj.get("description").toString();
+                desc = desc + "\n" + "Description " + i + ". " + jsobj.get("description").toString();
             }
 
             addDoc(w, strain_name, desc);
@@ -145,7 +145,9 @@ public class Indexer {
         Document doc = new Document();
         doc.add(new TextField("title", title, Field.Store.YES));
         doc.add(new TextField("body", body, Field.Store.YES));
-        doc.add(new TextField("both", title + " " + body, Field.Store.YES));
+        doc.add(new TextField("title_stem", title, Field.Store.YES));
+        doc.add(new TextField("body_stem", body, Field.Store.YES));
+
         w.addDocument(doc);
     }
 }

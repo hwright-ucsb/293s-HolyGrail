@@ -302,6 +302,12 @@ def computeDescriptionTfidf():
 			tfidf = vect.fit_transform(descriptions[strain])
 			similarities[strain] = (tfidf * tfidf.T).A
 
+def countDescriptions():
+	count = 0
+	for desc in descriptions:
+		count += len(descriptions[desc])
+
+	return str(count)
 
 def main():
 	importFourTwenty101('strains420101.json')
@@ -309,6 +315,7 @@ def main():
 	importWikileaf('wikileaf_strains_all.json')
 	importLeafly('leafly-fixed.json')
 	#importHerb('herb_strains.json')
+	print("Total Desc is " + countDescriptions())
 	print("Null is " + str(null))
 	
 
