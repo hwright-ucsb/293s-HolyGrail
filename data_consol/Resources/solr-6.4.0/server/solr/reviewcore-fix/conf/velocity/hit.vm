@@ -1,0 +1,43 @@
+#set($docId = $doc.getFirstValue($request.schema.uniqueKeyField.name))
+
+
+<div class="result-document">
+
+  <table>
+  <font size="10">Suggested Strain: <strong> $esc.html($doc.STRAIN).replace('[','').replace(']','')</strong></font>
+    <tr>
+    <th align="right" valign="top" style="field-name">
+      Star Rating: 
+      </th>
+      <td align="left" valign="top">
+      $esc.html($doc.STARS).replace('[','').replace(']','')
+      </td>
+      </tr>
+      <tr>
+    <th align="right" valign="top" style="field-name">
+      Attributes: 
+      </th>
+      <td align="left" valign="top">
+      $esc.html($doc.attributes).replace('[','').replace(']','')
+      </td>
+      </tr>
+      <tr>
+    <th align="right" valign="top" style="field-name">
+      Search Result Score: 
+      </th>
+
+      <td align="left" valign="top">
+      $esc.html($doc.score).replace('[','').replace(']','')
+      </td>
+    </tr>
+  </table>
+
+  #if($debug)
+    <a href="#" onclick='jQuery(this).siblings("pre").toggle(); return false;'>toggle explain</a>
+
+    <pre style="display:none">
+      $response.getExplainMap().get($docId)
+    </pre>
+  #end
+</div>
+

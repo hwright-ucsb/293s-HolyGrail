@@ -1,0 +1,215 @@
+2017-02-08 07:27:51.401 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2017-02-08 07:27:51.781 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 6.4.0
+2017-02-08 07:27:51.781 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in cloud mode on port 8983
+2017-02-08 07:27:51.781 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /Users/haleighwright/desktop/w17/293s-proj1/resources/solr-6.4.0
+2017-02-08 07:27:51.805 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-02-08T07:27:51.782Z
+2017-02-08 07:27:51.805 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-02-08 07:27:51.830 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /Users/haleighwright/desktop/w17/293s-proj1/resources/solr-6.4.0/server/solr
+2017-02-08 07:27:51.837 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /Users/haleighwright/desktop/w17/293s-proj1/resources/solr-6.4.0/server/solr/solr.xml
+2017-02-08 07:27:52.306 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2017-02-08 07:27:52.318 INFO  (main) [   ] o.a.s.c.SolrZkServerProps Reading configuration from: /Users/haleighwright/desktop/w17/293s-proj1/resources/solr-6.4.0/server/solr/zoo.cfg
+2017-02-08 07:27:52.320 INFO  (main) [   ] o.a.s.c.SolrZkServer STARTING EMBEDDED STANDALONE ZOOKEEPER SERVER at port 9983
+2017-02-08 07:27:52.823 INFO  (main) [   ] o.a.s.c.ZkContainer Zookeeper client=localhost:9983
+2017-02-08 07:27:52.999 INFO  (main) [   ] o.a.s.c.OverseerElectionContext I am going to be the leader 169.231.46.134:8983_solr
+2017-02-08 07:27:53.002 INFO  (main) [   ] o.a.s.c.Overseer Overseer (id=97421811541213184-169.231.46.134:8983_solr-n_0000000000) starting
+2017-02-08 07:27:53.094 INFO  (main) [   ] o.a.s.c.ZkController Register node as live in ZooKeeper:/live_nodes/169.231.46.134:8983_solr
+2017-02-08 07:27:53.098 INFO  (OverseerStateUpdate-97421811541213184-169.231.46.134:8983_solr-n_0000000000) [   ] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (0) -> (1)
+2017-02-08 07:27:53.288 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 4 core definitions underneath /Users/haleighwright/desktop/w17/293s-proj1/resources/solr-6.4.0/server/solr
+2017-02-08 07:27:53.293 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [nonono, tester, tester2, tester3]
+2017-02-08 07:27:53.312 INFO  (OverseerStateUpdate-97421811541213184-169.231.46.134:8983_solr-n_0000000000) [   ] o.a.s.c.o.ReplicaMutator Assigning new node to shard shard=shard1
+2017-02-08 07:27:53.325 INFO  (OverseerStateUpdate-97421811541213184-169.231.46.134:8983_solr-n_0000000000) [   ] o.a.s.c.o.ReplicaMutator Assigning new node to shard shard=shard1
+2017-02-08 07:27:53.328 INFO  (OverseerStateUpdate-97421811541213184-169.231.46.134:8983_solr-n_0000000000) [   ] o.a.s.c.o.ReplicaMutator Assigning new node to shard shard=shard1
+2017-02-08 07:27:53.331 INFO  (OverseerStateUpdate-97421811541213184-169.231.46.134:8983_solr-n_0000000000) [   ] o.a.s.c.o.ReplicaMutator Assigning new node to shard shard=shard1
+2017-02-08 07:27:53.337 INFO  (main) [   ] o.e.j.s.Server Started @2609ms
+2017-02-08 07:27:54.307 INFO  (coreLoadExecutor-8-thread-4-processing-n:169.231.46.134:8983_solr) [c:tester   x:tester] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+2017-02-08 07:27:54.307 INFO  (coreLoadExecutor-8-thread-1-processing-n:169.231.46.134:8983_solr) [c:nonono   x:nonono] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+2017-02-08 07:27:54.307 INFO  (coreLoadExecutor-8-thread-2-processing-n:169.231.46.134:8983_solr) [c:tester2   x:tester2] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+2017-02-08 07:27:54.307 INFO  (coreLoadExecutor-8-thread-3-processing-n:169.231.46.134:8983_solr) [c:tester3   x:tester3] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 1
+2017-02-08 07:27:57.313 INFO  (coreLoadExecutor-8-thread-3-processing-n:169.231.46.134:8983_solr) [c:tester3   x:tester3] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+2017-02-08 07:27:57.313 INFO  (coreLoadExecutor-8-thread-2-processing-n:169.231.46.134:8983_solr) [c:tester2   x:tester2] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+2017-02-08 07:27:57.313 INFO  (coreLoadExecutor-8-thread-1-processing-n:169.231.46.134:8983_solr) [c:nonono   x:nonono] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+2017-02-08 07:27:57.313 INFO  (coreLoadExecutor-8-thread-4-processing-n:169.231.46.134:8983_solr) [c:tester   x:tester] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 2
+2017-02-08 07:28:00.317 INFO  (coreLoadExecutor-8-thread-1-processing-n:169.231.46.134:8983_solr) [c:nonono   x:nonono] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+2017-02-08 07:28:00.318 INFO  (coreLoadExecutor-8-thread-3-processing-n:169.231.46.134:8983_solr) [c:tester3   x:tester3] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+2017-02-08 07:28:00.318 INFO  (coreLoadExecutor-8-thread-2-processing-n:169.231.46.134:8983_solr) [c:tester2   x:tester2] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+2017-02-08 07:28:00.318 INFO  (coreLoadExecutor-8-thread-4-processing-n:169.231.46.134:8983_solr) [c:tester   x:tester] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 3
+2017-02-08 07:28:03.323 INFO  (coreLoadExecutor-8-thread-1-processing-n:169.231.46.134:8983_solr) [c:nonono   x:nonono] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+2017-02-08 07:28:03.324 INFO  (coreLoadExecutor-8-thread-4-processing-n:169.231.46.134:8983_solr) [c:tester   x:tester] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+2017-02-08 07:28:03.323 INFO  (coreLoadExecutor-8-thread-3-processing-n:169.231.46.134:8983_solr) [c:tester3   x:tester3] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+2017-02-08 07:28:03.324 INFO  (coreLoadExecutor-8-thread-2-processing-n:169.231.46.134:8983_solr) [c:tester2   x:tester2] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 4
+2017-02-08 07:28:06.330 INFO  (coreLoadExecutor-8-thread-4-processing-n:169.231.46.134:8983_solr) [c:tester   x:tester] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+2017-02-08 07:28:06.330 INFO  (coreLoadExecutor-8-thread-3-processing-n:169.231.46.134:8983_solr) [c:tester3   x:tester3] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+2017-02-08 07:28:06.330 INFO  (coreLoadExecutor-8-thread-1-processing-n:169.231.46.134:8983_solr) [c:nonono   x:nonono] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+2017-02-08 07:28:06.330 INFO  (coreLoadExecutor-8-thread-2-processing-n:169.231.46.134:8983_solr) [c:tester2   x:tester2] o.a.s.c.CreateCollectionCmd Could not find collection configName - pausing for 3 seconds and trying again - try: 5
+2017-02-08 07:28:09.335 ERROR (coreLoadExecutor-8-thread-4-processing-n:169.231.46.134:8983_solr) [c:tester   x:tester] o.a.s.c.CreateCollectionCmd Could not find configName for collection tester
+2017-02-08 07:28:09.335 ERROR (coreLoadExecutor-8-thread-1-processing-n:169.231.46.134:8983_solr) [c:nonono   x:nonono] o.a.s.c.CreateCollectionCmd Could not find configName for collection nonono
+2017-02-08 07:28:09.335 ERROR (coreLoadExecutor-8-thread-2-processing-n:169.231.46.134:8983_solr) [c:tester2   x:tester2] o.a.s.c.CreateCollectionCmd Could not find configName for collection tester2
+2017-02-08 07:28:09.335 ERROR (coreLoadExecutor-8-thread-3-processing-n:169.231.46.134:8983_solr) [c:tester3   x:tester3] o.a.s.c.CreateCollectionCmd Could not find configName for collection tester3
+2017-02-08 07:28:09.340 ERROR (coreLoadExecutor-8-thread-2-processing-n:169.231.46.134:8983_solr) [c:tester2   x:tester2] o.a.s.c.CoreContainer Error creating core [tester2]: Could not find configName for collection tester2 found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection tester2 found:null
+	at org.apache.solr.cloud.CreateCollectionCmd.getConfName(CreateCollectionCmd.java:428)
+	at org.apache.solr.cloud.CreateCollectionCmd.createCollectionZkNode(CreateCollectionCmd.java:351)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:45)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:74)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:887)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:541)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-02-08 07:28:09.340 ERROR (coreLoadExecutor-8-thread-1-processing-n:169.231.46.134:8983_solr) [c:nonono   x:nonono] o.a.s.c.CoreContainer Error creating core [nonono]: Could not find configName for collection nonono found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection nonono found:null
+	at org.apache.solr.cloud.CreateCollectionCmd.getConfName(CreateCollectionCmd.java:428)
+	at org.apache.solr.cloud.CreateCollectionCmd.createCollectionZkNode(CreateCollectionCmd.java:351)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:45)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:74)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:887)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:541)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-02-08 07:28:09.340 ERROR (coreLoadExecutor-8-thread-4-processing-n:169.231.46.134:8983_solr) [c:tester   x:tester] o.a.s.c.CoreContainer Error creating core [tester]: Could not find configName for collection tester found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection tester found:null
+	at org.apache.solr.cloud.CreateCollectionCmd.getConfName(CreateCollectionCmd.java:428)
+	at org.apache.solr.cloud.CreateCollectionCmd.createCollectionZkNode(CreateCollectionCmd.java:351)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:45)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:74)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:887)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:541)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-02-08 07:28:09.340 ERROR (coreLoadExecutor-8-thread-3-processing-n:169.231.46.134:8983_solr) [c:tester3   x:tester3] o.a.s.c.CoreContainer Error creating core [tester3]: Could not find configName for collection tester3 found:null
+org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection tester3 found:null
+	at org.apache.solr.cloud.CreateCollectionCmd.getConfName(CreateCollectionCmd.java:428)
+	at org.apache.solr.cloud.CreateCollectionCmd.createCollectionZkNode(CreateCollectionCmd.java:351)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:45)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:74)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:887)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:541)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-02-08 07:28:09.344 ERROR (coreContainerWorkExecutor-2-thread-1-processing-n:169.231.46.134:8983_solr) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be created
+java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [nonono]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.solr.core.CoreContainer.lambda$load$4(CoreContainer.java:569)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorService.java:176)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [nonono]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:902)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:541)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	... 5 more
+Caused by: org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection nonono found:null
+	at org.apache.solr.cloud.CreateCollectionCmd.getConfName(CreateCollectionCmd.java:428)
+	at org.apache.solr.cloud.CreateCollectionCmd.createCollectionZkNode(CreateCollectionCmd.java:351)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:45)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:74)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:887)
+	... 7 more
+2017-02-08 07:28:09.345 ERROR (coreContainerWorkExecutor-2-thread-1-processing-n:169.231.46.134:8983_solr) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be created
+java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [tester2]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.solr.core.CoreContainer.lambda$load$4(CoreContainer.java:569)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorService.java:176)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [tester2]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:902)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:541)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	... 5 more
+Caused by: org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection tester2 found:null
+	at org.apache.solr.cloud.CreateCollectionCmd.getConfName(CreateCollectionCmd.java:428)
+	at org.apache.solr.cloud.CreateCollectionCmd.createCollectionZkNode(CreateCollectionCmd.java:351)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:45)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:74)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:887)
+	... 7 more
+2017-02-08 07:28:09.346 ERROR (coreContainerWorkExecutor-2-thread-1-processing-n:169.231.46.134:8983_solr) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be created
+java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [tester3]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.solr.core.CoreContainer.lambda$load$4(CoreContainer.java:569)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorService.java:176)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [tester3]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:902)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:541)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	... 5 more
+Caused by: org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection tester3 found:null
+	at org.apache.solr.cloud.CreateCollectionCmd.getConfName(CreateCollectionCmd.java:428)
+	at org.apache.solr.cloud.CreateCollectionCmd.createCollectionZkNode(CreateCollectionCmd.java:351)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:45)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:74)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:887)
+	... 7 more
+2017-02-08 07:28:09.346 ERROR (coreContainerWorkExecutor-2-thread-1-processing-n:169.231.46.134:8983_solr) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be created
+java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [tester]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.solr.core.CoreContainer.lambda$load$4(CoreContainer.java:569)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorService.java:176)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:229)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [tester]
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:902)
+	at org.apache.solr.core.CoreContainer.lambda$load$3(CoreContainer.java:541)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	... 5 more
+Caused by: org.apache.solr.common.cloud.ZooKeeperException: Could not find configName for collection tester found:null
+	at org.apache.solr.cloud.CreateCollectionCmd.getConfName(CreateCollectionCmd.java:428)
+	at org.apache.solr.cloud.CreateCollectionCmd.createCollectionZkNode(CreateCollectionCmd.java:351)
+	at org.apache.solr.cloud.CloudConfigSetService.createCoreResourceLoader(CloudConfigSetService.java:45)
+	at org.apache.solr.core.ConfigSetService.getConfig(ConfigSetService.java:74)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:887)
+	... 7 more
+2017-02-08 07:28:23.519 INFO  (qtp257895351-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1486538903278} status=0 QTime=34
+2017-02-08 07:28:23.559 INFO  (qtp257895351-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1486538903279} status=0 QTime=35
+2017-02-08 07:28:23.559 INFO  (qtp257895351-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1486538903279} status=0 QTime=72
+2017-02-08 07:28:23.712 INFO  (qtp257895351-22) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1486538903279 and sendToOCPQueue=true
+2017-02-08 07:28:23.712 INFO  (qtp257895351-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1486538903279} status=0 QTime=14
+2017-02-08 07:28:36.599 INFO  (qtp257895351-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1486538903278} status=0 QTime=0
+2017-02-08 07:28:36.682 INFO  (qtp257895351-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1486538903278} status=0 QTime=0
+2017-02-08 07:28:36.696 INFO  (qtp257895351-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1486538903279} status=0 QTime=14
+2017-02-08 07:28:36.751 INFO  (qtp257895351-22) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1486538903279 and sendToOCPQueue=true
+2017-02-08 07:28:36.751 INFO  (qtp257895351-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1486538903279} status=0 QTime=0
+2017-02-08 07:28:43.922 INFO  (qtp257895351-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/live_nodes&wt=json&_=1486538923889} status=0 QTime=4
+2017-02-08 07:28:43.994 INFO  (qtp257895351-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1486538903278} status=0 QTime=0
+2017-02-08 07:28:44.008 INFO  (qtp257895351-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1486538903279} status=0 QTime=13
+2017-02-08 07:28:44.033 INFO  (qtp257895351-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/clusterstate.json&view=graph&detail=true&wt=json&_=1486538923889} status=0 QTime=4
+2017-02-08 07:28:44.062 INFO  (qtp257895351-16) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1486538903279 and sendToOCPQueue=true
+2017-02-08 07:28:44.062 INFO  (qtp257895351-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1486538903279} status=0 QTime=0

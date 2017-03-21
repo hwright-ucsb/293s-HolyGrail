@@ -1,4 +1,16 @@
-data_consol/Resources
 .DS_Store
+/data_consol/Resources/solr-6.4.0/NOTICE.txt
+/data_consol/Resources/solr-6.4.0/README.txt
+
+/data_consol/Resources/lucene-6.4.0
+/data_consol/Resources/solr-6.4.0/bin
+/data_consol/Resources/solr-6.4.0/contrib
+/data_consol/Resources/solr-6.4.0/dist
+/data_consol/Resources/solr-6.4.0/docs
+/data_consol/Resources/solr-6.4.0/example
+/data_consol/Resources/solr-6.4.0/LICENSE.txt
+/data_consol/Resources/solr-6.4.0/licenses
+/data_consol/Resources/solr-6.4.0/LUCENE_CHANGES.txt
+
 *.class
 *.lucene
