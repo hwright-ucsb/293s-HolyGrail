@@ -10,8 +10,10 @@ import java.nio.file.*;
 import java.nio.file.*;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Arrays;
 import java.util.Set;
 import java.util.Scanner;
+import java.util.ArrayList;
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.core.StopFilter;
 import org.apache.lucene.analysis.en.EnglishAnalyzer;
@@ -117,7 +119,6 @@ public class QueryString {
 		int fieldCode = 1;
 		// sc.nextLine();
 		Query q;
-		BooleanQuery.Builder totalQuery = new BooleanQuery.Builder();
 		MultiFieldQueryParser conjunctiveParser;
 		QueryParser queryParser;
 		IndexReader reader = null;
@@ -143,8 +144,11 @@ public class QueryString {
 			querystr = removeStopWordsAndStem(oldQuery, false);
 			oldQueryStopRemoved = removeStopWordsAndStem(oldQuery, false);
 
+			oldQueryStopRemoved.replaceAll("( )+", " ");
+
 			System.out.println("\n");
 			System.out.println("Your Query: " + oldQuery);
+			System.out.println("Stop Word Removal Query: " + oldQueryStopRemoved);
 
 			// if(fieldCode==1){
 			// 	queryParser = new QueryParser("both", analyzer).parse(querystr);
@@ -170,6 +174,8 @@ public class QueryString {
 			boosts.put("body_stem", 1f);
 
 			int j= 0;
+			BooleanQuery.Builder totalQuery = new BooleanQuery.Builder();
+			ArrayList<String> totalQueryStrings = new ArrayList<String>();
 
 			String tmp = oldQueryStopRemoved;
 			for(String strain : strains) {
@@ -178,6 +184,7 @@ public class QueryString {
 					conjunctiveParser = new MultiFieldQueryParser(fields, analyzer, boosts);
 					conjunctiveParser.setDefaultOperator(QueryParser.Operator.AND);
 		    		q = conjunctiveParser.parse(strain);
+		    		totalQueryStrings.add(strain);
 					BoostQuery boost = new BoostQuery(q, 0.8f);
 					totalQuery.add(boost, Occur.MUST);
 					// System.out.println("Query " + Integer.toString(j) + ": " + strain);
@@ -192,13 +199,25 @@ public class QueryString {
     			q = conjunctiveParser.parse(tmp);
     			BoostQuery boost = new BoostQuery(q, 0.1f);
     			totalQuery.add(boost, Occur.SHOULD);
+    			totalQueryStrings.add(tmp);
+    		} else {
+    			if (oldQuery.trim() == "") {
+    				System.out.println("enter something valid plz \n");
+    				continue;
+    			}
     		}
+
+    		System.out.println("Query Terms Split:");
+    		int it = 0;
+    		for (String ter: totalQueryStrings) {
+    			System.out.println("\t\033[1;31mQuery" + it + ": " + ter + "\033[0m");
+    			it++;
+    		}
+    		System.out.println("\n");
 
 			int hitsPerPage = 10;
 			reader = DirectoryReader.open(index);
 			IndexSearcher searcher = new IndexSearcher(reader);
-			
-			
 
 
 			TopDocs docs = searcher.search(totalQuery.build(), hitsPerPage);
@@ -213,16 +232,25 @@ public class QueryString {
 				String formattedTitle = d.get("title");
 				String formattedBody = d.get("body");
 
-				String[] l;
-				if(oldQueryStopRemoved.contains(" "))
-					l = oldQueryStopRemoved.split(" ");
-				else {
-					l = new String[1];
-					l[0] = oldQueryStopRemoved;
-				}
-				for(String s : l) {
-					formattedTitle = formattedTitle.replaceAll("((?i)" + s + ")", "\033[1;31m" + "$1" + "\033[0m");
-					formattedBody = formattedBody.replaceAll("((?i)" + s + ")", "\033[1;31m" + "$1" + "\033[0m");
+				for(String s : totalQueryStrings) {	
+					ArrayList<String> k = new ArrayList();
+
+					// System.out.println("s is " + s);
+					if(!strains.contains(s) && s.contains(" ")) {
+						k = new ArrayList(Arrays.asList(s.split(" ")));
+					} else {
+						k.add(s);
+					}
+					for(String a : k) {
+						a = a.trim();
+						if(!a.equals("")){
+							// System.out.println("a is " + a);
+							formattedTitle = formattedTitle.replaceAll("((?i)" + a + ")", "\033[1;32m" + "$1" + "\033[0m");
+							formattedBody = formattedBody.replaceAll("((?i)" + a + ")", "\033[1;32m" + "$1" + "\033[0m");
+						}
+					}
+					
+					
 				}
 
 
