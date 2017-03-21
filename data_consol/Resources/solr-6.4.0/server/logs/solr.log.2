@@ -1,0 +1,1238 @@
+2017-03-13 08:39:31.230 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.14.v20161028
+2017-03-13 08:39:31.607 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 6.4.0
+2017-03-13 08:39:31.607 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2017-03-13 08:39:31.607 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0
+2017-03-13 08:39:31.621 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2017-03-13T08:39:31.608Z
+2017-03-13 08:39:31.622 INFO  (main) [   ] o.a.s.s.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2017-03-13 08:39:31.636 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr
+2017-03-13 08:39:31.641 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/solr.xml
+2017-03-13 08:39:31.997 INFO  (main) [   ] o.a.s.u.UpdateShardHandler Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+2017-03-13 08:39:32.713 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 8 core definitions underneath /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr
+2017-03-13 08:39:32.722 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [coretest1, nonono, reviewcore, reviewcore-fix, reviewcore-fix-2, tester, tester2, tester3]
+2017-03-13 08:39:32.826 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.c.SolrResourceLoader [reviewcore] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 08:39:32.826 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.c.SolrResourceLoader [coretest1] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 08:39:32.826 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.c.SolrResourceLoader [nonono] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 08:39:32.896 INFO  (main) [   ] o.e.j.s.Server Started @2202ms
+2017-03-13 08:39:33.115 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 08:39:33.116 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 08:39:33.117 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 08:39:33.392 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.s.IndexSchema [coretest1] Schema name=example-data-driven-schema
+2017-03-13 08:39:33.393 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.s.IndexSchema [nonono] Schema name=example-data-driven-schema
+2017-03-13 08:39:33.405 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.s.IndexSchema [reviewcore] Schema name=example-data-driven-schema
+2017-03-13 08:39:33.645 WARN  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.c.SolrResourceLoader Solr loaded a deprecated plugin/analysis class [solr.SynonymFilterFactory]. Please consult documentation how to replace it accordingly.
+2017-03-13 08:39:34.066 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 08:39:34.066 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 08:39:34.066 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 08:39:34.119 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.c.CoreContainer Creating SolrCore 'coretest1' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1
+2017-03-13 08:39:34.120 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.c.CoreContainer Creating SolrCore 'reviewcore' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore
+2017-03-13 08:39:34.120 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.c.CoreContainer Creating SolrCore 'nonono' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/nonono
+2017-03-13 08:39:34.162 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.c.SolrCore [[nonono] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/nonono], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/nonono/data/]
+2017-03-13 08:39:34.162 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.c.SolrCore [[coretest1] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/data/]
+2017-03-13 08:39:34.162 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.c.SolrCore [[reviewcore] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore/data/]
+2017-03-13 08:39:34.164 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 08:39:34.164 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 08:39:34.164 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 08:39:34.223 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 08:39:34.223 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 08:39:34.223 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 08:39:34.581 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-03-13 08:39:34.581 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-03-13 08:39:34.581 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-03-13 08:39:34.581 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-03-13 08:39:34.581 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-03-13 08:39:34.581 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-03-13 08:39:34.613 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 08:39:34.613 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 08:39:34.613 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 08:39:34.613 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 08:39:34.615 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 08:39:34.615 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 08:39:34.715 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.s.SolrIndexSearcher Opening [Searcher@37000b35[nonono] main]
+2017-03-13 08:39:34.715 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.s.SolrIndexSearcher Opening [Searcher@3f95e8a[coretest1] main]
+2017-03-13 08:39:34.730 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf
+2017-03-13 08:39:34.730 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/nonono/conf
+2017-03-13 08:39:34.753 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.s.SolrIndexSearcher Opening [Searcher@13674e3b[reviewcore] main]
+2017-03-13 08:39:34.754 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore/conf
+2017-03-13 08:39:34.771 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 08:39:34.771 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 08:39:34.771 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 08:39:34.786 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 08:39:34.786 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 08:39:34.786 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 08:39:34.790 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/nonono/conf/elevate.xml
+2017-03-13 08:39:34.790 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore/conf/elevate.xml
+2017-03-13 08:39:34.790 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf/elevate.xml
+2017-03-13 08:39:34.815 INFO  (coreLoadExecutor-6-thread-2) [   x:nonono] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 08:39:34.815 INFO  (coreLoadExecutor-6-thread-3) [   x:reviewcore] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 08:39:34.815 INFO  (coreLoadExecutor-6-thread-1) [   x:coretest1] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 08:39:34.840 INFO  (searcherExecutor-9-thread-1-processing-x:nonono) [   x:nonono] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@37000b35[nonono] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C12842/1:delGen=1)))}
+2017-03-13 08:39:34.840 INFO  (searcherExecutor-7-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@3f95e8a[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 08:39:34.840 INFO  (searcherExecutor-7-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 08:39:34.840 INFO  (searcherExecutor-7-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 08:39:34.840 INFO  (searcherExecutor-9-thread-1-processing-x:nonono) [   x:nonono] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 08:39:34.841 INFO  (searcherExecutor-9-thread-1-processing-x:nonono) [   x:nonono] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 08:39:34.841 INFO  (searcherExecutor-8-thread-1-processing-x:reviewcore) [   x:reviewcore] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@13674e3b[reviewcore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C36) Uninverting(_1(6.4.0):C560) Uninverting(_2(6.4.0):C26565)))}
+2017-03-13 08:39:34.841 INFO  (searcherExecutor-8-thread-1-processing-x:reviewcore) [   x:reviewcore] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 08:39:34.841 INFO  (searcherExecutor-8-thread-1-processing-x:reviewcore) [   x:reviewcore] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 08:39:34.844 INFO  (searcherExecutor-7-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.SolrCore [coretest1] Registered new searcher Searcher@3f95e8a[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 08:39:34.844 INFO  (searcherExecutor-9-thread-1-processing-x:nonono) [   x:nonono] o.a.s.c.SolrCore [nonono] Registered new searcher Searcher@37000b35[nonono] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C12842/1:delGen=1)))}
+2017-03-13 08:39:34.844 INFO  (searcherExecutor-8-thread-1-processing-x:reviewcore) [   x:reviewcore] o.a.s.c.SolrCore [reviewcore] Registered new searcher Searcher@13674e3b[reviewcore] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C36) Uninverting(_1(6.4.0):C560) Uninverting(_2(6.4.0):C26565)))}
+2017-03-13 08:39:34.904 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrResourceLoader [reviewcore-fix] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 08:39:34.908 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.SolrResourceLoader [reviewcore-fix-2] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 08:39:34.911 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.SolrResourceLoader [tester] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 08:39:34.934 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 08:39:34.943 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 08:39:34.943 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 08:39:34.997 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema [reviewcore-fix] Schema name=example-data-driven-schema
+2017-03-13 08:39:35.001 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.IndexSchema [tester] Schema name=example-data-driven-schema
+2017-03-13 08:39:35.001 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.s.IndexSchema [reviewcore-fix-2] Schema name=example-data-driven-schema
+2017-03-13 08:39:35.242 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 08:39:35.245 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 08:39:35.247 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 08:39:35.274 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.CoreContainer Creating SolrCore 'reviewcore-fix' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix
+2017-03-13 08:39:35.274 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrCore [[reviewcore-fix] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix/data/]
+2017-03-13 08:39:35.275 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 08:39:35.278 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.CoreContainer Creating SolrCore 'tester' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester
+2017-03-13 08:39:35.278 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 08:39:35.278 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.SolrCore [[tester] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester/data/]
+2017-03-13 08:39:35.278 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 08:39:35.282 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 08:39:35.282 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.CoreContainer Creating SolrCore 'reviewcore-fix-2' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix-2
+2017-03-13 08:39:35.282 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.SolrCore [[reviewcore-fix-2] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix-2], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix-2/data/]
+2017-03-13 08:39:35.282 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 08:39:35.286 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 08:39:35.301 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-03-13 08:39:35.301 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-03-13 08:39:35.306 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-03-13 08:39:35.306 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-03-13 08:39:35.306 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-03-13 08:39:35.306 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-03-13 08:39:35.307 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 08:39:35.307 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 08:39:35.310 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 08:39:35.310 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 08:39:35.315 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 08:39:35.315 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 08:39:35.333 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.s.SolrIndexSearcher Opening [Searcher@34bdc202[reviewcore-fix-2] main]
+2017-03-13 08:39:35.334 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix-2/conf
+2017-03-13 08:39:35.334 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 08:39:35.334 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 08:39:35.335 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix-2/conf/elevate.xml
+2017-03-13 08:39:35.337 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.SolrIndexSearcher Opening [Searcher@6b27fd6f[tester] main]
+2017-03-13 08:39:35.337 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester/conf
+2017-03-13 08:39:35.338 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 08:39:35.338 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 08:39:35.338 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester/conf/elevate.xml
+2017-03-13 08:39:35.339 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 08:39:35.340 INFO  (searcherExecutor-24-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@34bdc202[reviewcore-fix-2] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C2) Uninverting(_1(6.4.0):C2) Uninverting(_2(6.4.0):C2)))}
+2017-03-13 08:39:35.340 INFO  (searcherExecutor-24-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 08:39:35.340 INFO  (searcherExecutor-24-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 08:39:35.343 INFO  (searcherExecutor-24-thread-1) [   ] o.a.s.c.SolrCore [reviewcore-fix-2] Registered new searcher Searcher@34bdc202[reviewcore-fix-2] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C2) Uninverting(_1(6.4.0):C2) Uninverting(_2(6.4.0):C2)))}
+2017-03-13 08:39:35.343 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 08:39:35.344 INFO  (searcherExecutor-23-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@6b27fd6f[tester] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C12842/1:delGen=1) Uninverting(_1(6.4.0):C12842/1:delGen=1)))}
+2017-03-13 08:39:35.344 INFO  (searcherExecutor-23-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 08:39:35.344 INFO  (searcherExecutor-23-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 08:39:35.346 INFO  (searcherExecutor-23-thread-1) [   ] o.a.s.c.SolrCore [tester] Registered new searcher Searcher@6b27fd6f[tester] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C12842/1:delGen=1) Uninverting(_1(6.4.0):C12842/1:delGen=1)))}
+2017-03-13 08:39:35.363 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.SolrResourceLoader [tester2] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 08:39:35.372 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.SolrIndexSearcher Opening [Searcher@46b1bf8b[reviewcore-fix] main]
+2017-03-13 08:39:35.374 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix/conf
+2017-03-13 08:39:35.374 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 08:39:35.374 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 08:39:35.374 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/reviewcore-fix/conf/elevate.xml
+2017-03-13 08:39:35.378 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 08:39:35.379 INFO  (searcherExecutor-22-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@46b1bf8b[reviewcore-fix] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C2) Uninverting(_1(6.4.0):C2) Uninverting(_2(6.4.0):C2) Uninverting(_3(6.4.0):C60210) Uninverting(_4(6.4.0):C58838) Uninverting(_5(6.4.0):C769) Uninverting(_6(6.4.0):C25294)))}
+2017-03-13 08:39:35.379 INFO  (searcherExecutor-22-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 08:39:35.379 INFO  (searcherExecutor-22-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 08:39:35.380 INFO  (searcherExecutor-22-thread-1) [   ] o.a.s.c.SolrCore [reviewcore-fix] Registered new searcher Searcher@46b1bf8b[reviewcore-fix] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C2) Uninverting(_1(6.4.0):C2) Uninverting(_2(6.4.0):C2) Uninverting(_3(6.4.0):C60210) Uninverting(_4(6.4.0):C58838) Uninverting(_5(6.4.0):C769) Uninverting(_6(6.4.0):C25294)))}
+2017-03-13 08:39:35.388 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 08:39:35.392 WARN  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.SolrConfig Couldn't add files from /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/ltr/lib filtered by .*\.jar to classpath: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/ltr/lib
+2017-03-13 08:39:35.393 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.SolrResourceLoader [tester3] Added 52 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 08:39:35.443 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2017-03-13 08:39:35.445 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 08:39:35.452 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.s.IndexSchema [tester2] Schema name=example-basic
+2017-03-13 08:39:35.524 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.IndexSchema [tester3] Schema name=example
+2017-03-13 08:39:35.668 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.s.IndexSchema Loaded schema example-basic/1.6 with uniqueid field id
+2017-03-13 08:39:35.688 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.CoreContainer Creating SolrCore 'tester2' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester2
+2017-03-13 08:39:35.688 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.SolrCore [[tester2] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester2], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester2/data/]
+2017-03-13 08:39:35.688 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 08:39:35.690 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 08:39:35.709 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-03-13 08:39:35.709 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-03-13 08:39:35.710 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 08:39:35.710 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 08:39:35.713 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.s.SolrIndexSearcher Opening [Searcher@5a84177e[tester2] main]
+2017-03-13 08:39:35.713 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester2/conf
+2017-03-13 08:39:35.714 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 08:39:35.714 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 08:39:35.714 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester2/conf/elevate.xml
+2017-03-13 08:39:35.732 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 08:39:35.733 INFO  (searcherExecutor-37-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@5a84177e[tester2] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-03-13 08:39:35.733 INFO  (searcherExecutor-37-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 08:39:35.733 INFO  (searcherExecutor-37-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 08:39:35.734 INFO  (searcherExecutor-37-thread-1) [   ] o.a.s.c.SolrCore [tester2] Registered new searcher Searcher@5a84177e[tester2] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-03-13 08:39:35.735 INFO  (coreLoadExecutor-6-thread-2) [   ] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1561743196930703360
+2017-03-13 08:39:35.757 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedWordSetResource for path /schema/analysis/stopwords/english
+2017-03-13 08:39:35.757 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.rest.schema.analysis.ManagedSynonymFilterFactory$SynonymManager for path /schema/analysis/synonyms/english
+2017-03-13 08:39:35.759 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.IndexSchema Loaded schema example/1.6 with uniqueid field id
+2017-03-13 08:39:35.759 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedStopFilterFactory to existing ManagedResource /schema/analysis/stopwords/english
+2017-03-13 08:39:35.759 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.RestManager Added observer of type org.apache.solr.rest.schema.analysis.ManagedSynonymFilterFactory to existing ManagedResource /schema/analysis/synonyms/english
+2017-03-13 08:39:35.775 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.CoreContainer Creating SolrCore 'tester3' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester3
+2017-03-13 08:39:35.775 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.SolrCore [[tester3] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester3], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester3/data/]
+2017-03-13 08:39:35.775 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 08:39:35.777 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 08:39:35.794 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2017-03-13 08:39:35.795 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2017-03-13 08:39:35.795 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 08:39:35.795 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 08:39:35.798 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.SolrIndexSearcher Opening [Searcher@3b8a1884[tester3] main]
+2017-03-13 08:39:35.798 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester3/conf
+2017-03-13 08:39:35.799 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _rest_managed.json using file:dir=/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester3/conf
+2017-03-13 08:39:35.799 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResource Loaded initArgs {} for /rest/managed
+2017-03-13 08:39:35.800 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_stopwords_english.json using file:dir=/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester3/conf
+2017-03-13 08:39:35.800 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true} for /schema/analysis/stopwords/english
+2017-03-13 08:39:35.800 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.s.a.ManagedWordSetResource Loaded 35 words for /schema/analysis/stopwords/english
+2017-03-13 08:39:35.800 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/stopwords/english
+2017-03-13 08:39:35.801 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_analysis_synonyms_english.json using file:dir=/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester3/conf
+2017-03-13 08:39:35.801 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResource Loaded initArgs {ignoreCase=true,format=solr} for /schema/analysis/synonyms/english
+2017-03-13 08:39:35.802 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.s.a.ManagedSynonymFilterFactory Loaded 3 synonym mappings for /schema/analysis/synonyms/english
+2017-03-13 08:39:35.803 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.r.ManagedResource Notified 2 observers of /schema/analysis/synonyms/english
+2017-03-13 08:39:35.803 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 08:39:35.803 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 08:39:35.808 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2017-03-13 08:39:35.811 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.s.SolrSuggester init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string,buildOnStartup=false}
+2017-03-13 08:39:35.823 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string,buildOnStartup=false}
+2017-03-13 08:39:35.824 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/tester3/conf/elevate.xml
+2017-03-13 08:39:35.828 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 08:39:35.828 INFO  (searcherExecutor-42-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@3b8a1884[tester3] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-03-13 08:39:35.830 INFO  (coreLoadExecutor-6-thread-3) [   ] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1561743197030318080
+2017-03-13 08:39:35.871 INFO  (searcherExecutor-42-thread-1) [   ] o.a.s.c.S.Request [tester3]  webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=41
+2017-03-13 08:39:35.871 INFO  (searcherExecutor-42-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 08:39:35.871 INFO  (searcherExecutor-42-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 08:39:35.871 INFO  (searcherExecutor-42-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: wordbreak
+2017-03-13 08:39:35.872 INFO  (searcherExecutor-42-thread-1) [   ] o.a.s.c.SolrCore [tester3] Registered new searcher Searcher@3b8a1884[tester3] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2017-03-13 08:41:39.105 INFO  (qtp257895351-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489394498599} status=0 QTime=1
+2017-03-13 08:41:39.143 INFO  (qtp257895351-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489394498600} status=0 QTime=39
+2017-03-13 08:41:39.146 INFO  (qtp257895351-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489394498600} status=0 QTime=41
+2017-03-13 08:41:44.609 INFO  (qtp257895351-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489394498599} status=0 QTime=0
+2017-03-13 08:41:44.615 INFO  (qtp257895351-17) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1489394504591} status=0 QTime=4
+2017-03-13 08:41:44.624 INFO  (qtp257895351-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489394498600} status=0 QTime=14
+2017-03-13 08:41:44.663 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1489394498600&ts=1489394498600} status=503 QTime=1
+2017-03-13 08:41:44.663 INFO  (qtp257895351-19) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/replication params={wt=json&command=details&_=1489394504592} status=0 QTime=1
+2017-03-13 08:41:44.676 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/system params={wt=json&_=1489394504591} status=0 QTime=14
+2017-03-13 08:53:17.835 INFO  (qtp257895351-19) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1489395197609&ts=1489395197609} status=503 QTime=0
+2017-03-13 08:53:17.835 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1489395197789} status=0 QTime=0
+2017-03-13 08:53:17.836 INFO  (qtp257895351-50) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489395197608} status=0 QTime=0
+2017-03-13 08:53:17.836 INFO  (qtp257895351-22) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/replication params={wt=json&command=details&_=1489395197790} status=0 QTime=1
+2017-03-13 08:53:17.850 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/system params={wt=json&_=1489395197789} status=0 QTime=15
+2017-03-13 08:53:17.851 INFO  (qtp257895351-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489395197609} status=0 QTime=16
+2017-03-13 08:55:01.586 ERROR (qtp257895351-57) [   x:coretest1] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: sort param field can't be found: pub_date_sort
+	at org.apache.solr.search.SortSpecParsing.parseSortSpecImpl(SortSpecParsing.java:198)
+	at org.apache.solr.search.SortSpecParsing.parseSortSpec(SortSpecParsing.java:60)
+	at org.apache.solr.search.QParser.getSortSpec(QParser.java:285)
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:187)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:269)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:166)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2306)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:658)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:464)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 08:55:01.586 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={facet.query=pub_date:[2012+TO+*]&facet.query=pub_date:[2007+TO+*]&facet.query=pub_date:[1992+TO+*]&f.subject_topic_facet.facet.limit=21&facet.field=format&facet.field={!ex%3Dpub_date_single}pub_date&facet.field=subject_topic_facet&facet.field=language_facet&facet.field=lc_1letter_facet&facet.field=subject_geo_facet&facet.field=subject_era_facet&facet.pivot=format,language_facet&sort=score+desc,+pub_date_sort+desc,+title_sort+asc&rows=10&wt=ruby&facet=true&f.language_facet.facet.limit=11} status=400 QTime=5
+2017-03-13 09:04:39.022 INFO  (qtp257895351-14) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/config params={wt=json&_=1489393421196} status=0 QTime=7
+2017-03-13 09:04:39.024 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1489393421195} status=0 QTime=9
+2017-03-13 09:04:39.129 INFO  (qtp257895351-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489393420919} status=0 QTime=0
+2017-03-13 09:04:39.142 INFO  (qtp257895351-50) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489393420920} status=0 QTime=13
+2017-03-13 09:04:39.208 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1489393421195} status=0 QTime=31
+2017-03-13 09:09:20.293 ERROR (qtp257895351-14) [   x:coretest1] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "format"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1239)
+	at org.apache.solr.request.SimpleFacets.getTermCounts(SimpleFacets.java:413)
+	at org.apache.solr.request.SimpleFacets.getTermCounts(SimpleFacets.java:381)
+	at org.apache.solr.request.SimpleFacets.lambda$getFacetFieldCounts$0(SimpleFacets.java:767)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.request.SimpleFacets$2.execute(SimpleFacets.java:706)
+	at org.apache.solr.request.SimpleFacets.getFacetFieldCounts(SimpleFacets.java:782)
+	at org.apache.solr.handler.component.FacetComponent.getFacetCounts(FacetComponent.java:321)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:265)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:295)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:166)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2306)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:658)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:464)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 09:09:20.293 INFO  (qtp257895351-14) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={f.subject_topic_facet.facet.limit=21&facet.field=format&facet.field={!ex%3Dpub_date_single}pub_date&facet.field=subject_topic_facet&facet.field=language_facet&facet.field=lc_1letter_facet&facet.field=subject_geo_facet&facet.field=subject_era_facet&rows=10&wt=ruby&facet=true&f.language_facet.facet.limit=11} hits=0 status=400 QTime=14
+2017-03-13 09:09:46.042 ERROR (qtp257895351-52) [   x:coretest1] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "format"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1239)
+	at org.apache.solr.request.SimpleFacets.getTermCounts(SimpleFacets.java:413)
+	at org.apache.solr.request.SimpleFacets.getTermCounts(SimpleFacets.java:381)
+	at org.apache.solr.request.SimpleFacets.lambda$getFacetFieldCounts$0(SimpleFacets.java:767)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.request.SimpleFacets$2.execute(SimpleFacets.java:706)
+	at org.apache.solr.request.SimpleFacets.getFacetFieldCounts(SimpleFacets.java:782)
+	at org.apache.solr.handler.component.FacetComponent.getFacetCounts(FacetComponent.java:321)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:265)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:295)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:166)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2306)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:658)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:464)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 09:09:46.043 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={f.subject_topic_facet.facet.limit=21&facet.field=format&facet.field={!ex%3Dpub_date_single}pub_date&facet.field=subject_topic_facet&facet.field=language_facet&facet.field=lc_1letter_facet&facet.field=subject_geo_facet&facet.field=subject_era_facet&rows=10&wt=ruby&facet=true&f.language_facet.facet.limit=11} hits=0 status=400 QTime=1
+2017-03-13 09:29:51.740 INFO  (qtp257895351-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489393420919} status=0 QTime=0
+2017-03-13 09:29:51.755 INFO  (qtp257895351-50) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489393420920} status=0 QTime=14
+2017-03-13 09:29:54.284 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={q=*:*&indent=on&wt=json&_=1489397391514} hits=5711 status=0 QTime=2
+2017-03-13 09:29:57.010 INFO  (qtp257895351-19) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={q=*:*&indent=on&wt=json} hits=5711 status=0 QTime=0
+2017-03-13 09:30:05.186 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=*:*&indent=on} hits=5711 status=0 QTime=19
+2017-03-13 09:30:05.186 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.PluginBag Going to create a new queryResponseWriter with {type = queryResponseWriter,name = velocity,class = solr.VelocityResponseWriter,attributes = {startup=lazy, name=velocity, class=solr.VelocityResponseWriter},args = {template.base.dir=,solr.resource.loader.enabled=true,params.resource.loader.enabled=false}} 
+2017-03-13 09:39:44.297 ERROR (qtp257895351-55) [   x:coretest1] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field: "tags"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1239)
+	at org.apache.solr.request.SimpleFacets.getTermCounts(SimpleFacets.java:413)
+	at org.apache.solr.request.SimpleFacets.getTermCounts(SimpleFacets.java:381)
+	at org.apache.solr.request.SimpleFacets.lambda$getFacetFieldCounts$0(SimpleFacets.java:767)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.request.SimpleFacets$2.execute(SimpleFacets.java:706)
+	at org.apache.solr.request.SimpleFacets.getFacetFieldCounts(SimpleFacets.java:782)
+	at org.apache.solr.handler.component.FacetComponent.getFacetCounts(FacetComponent.java:321)
+	at org.apache.solr.handler.component.FacetComponent.process(FacetComponent.java:265)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:295)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:166)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2306)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:658)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:464)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 09:39:44.298 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={facet.field=tags} hits=5711 status=400 QTime=2
+2017-03-13 09:39:44.323 ERROR (qtp257895351-55) [   x:coretest1] o.a.s.r.VelocityResponseWriter Left side ($response.facetFields.size()) of '>' operation has null value at facets.vm[line 6, column 35]
+2017-03-13 09:39:51.085 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={facet.field=STRAIN} hits=5711 status=0 QTime=37
+2017-03-13 09:40:30.588 INFO  (qtp257895351-14) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=&fq=STRAIN:"monster+cookies"} hits=8 status=0 QTime=9
+2017-03-13 09:41:23.307 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=&fq=STRAIN:"california+orange"} hits=6 status=0 QTime=1
+2017-03-13 09:49:09.632 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={facet.field=STRAIN} hits=5711 status=0 QTime=4
+2017-03-13 09:54:26.252 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={facet.field=STRAIN} hits=5711 status=0 QTime=3
+2017-03-13 09:56:12.411 INFO  (qtp257895351-19) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:03:15.067 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:03:36.021 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:04:26.413 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:05:19.427 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:05:54.044 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:05:58.999 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=hello} hits=0 status=0 QTime=11
+2017-03-13 10:06:08.187 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue} hits=353 status=0 QTime=9
+2017-03-13 10:06:18.402 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=11
+2017-03-13 10:06:58.189 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=1
+2017-03-13 10:07:13.747 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=1
+2017-03-13 10:07:16.298 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=0
+2017-03-13 10:09:03.786 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=0
+2017-03-13 10:28:42.679 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=1
+2017-03-13 10:28:59.602 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=1
+2017-03-13 10:29:01.107 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=1
+2017-03-13 10:30:07.184 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=1
+2017-03-13 10:31:19.705 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=blue+dream} hits=395 status=0 QTime=1
+2017-03-13 10:31:21.621 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:31:23.260 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:31:57.359 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:33:58.803 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={} hits=5711 status=0 QTime=0
+2017-03-13 10:34:05.538 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=} hits=5711 status=0 QTime=0
+2017-03-13 10:34:28.941 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=w} hits=2 status=0 QTime=8
+2017-03-13 10:34:54.491 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=w} hits=2 status=0 QTime=0
+2017-03-13 10:38:09.311 INFO  (qtp257895351-14) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=w} hits=2 status=0 QTime=0
+2017-03-13 10:38:11.088 INFO  (qtp257895351-19) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=w} hits=2 status=0 QTime=0
+2017-03-13 10:38:38.276 INFO  (qtp257895351-14) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=w&fl=STRAIN} hits=2 status=0 QTime=0
+2017-03-13 10:38:58.609 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=w} hits=2 status=0 QTime=0
+2017-03-13 10:39:09.007 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=8
+2017-03-13 10:39:45.719 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=0
+2017-03-13 10:39:47.881 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=0
+2017-03-13 10:50:05.425 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=0
+2017-03-13 10:50:08.658 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=0
+2017-03-13 10:50:09.795 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=0
+2017-03-13 10:50:35.619 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=0
+2017-03-13 10:50:35.644 ERROR (qtp257895351-16) [   x:coretest1] o.a.s.r.VelocityResponseWriter ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: "+" (43), after : "" at browse.vm[line 15, column 81]
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1514)
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:373)
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:358)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-13 10:50:35.646 ERROR (qtp257895351-16) [   x:coretest1] o.a.s.s.HttpSolrCall null:java.io.IOException: Lexical error,   Encountered: "+" (43), after : "" at browse.vm[line 15, column 81]
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:360)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 10:50:35.652 ERROR (qtp257895351-16) [   x:coretest1] o.a.s.r.VelocityResponseWriter ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: "+" (43), after : "" at browse.vm[line 15, column 81]
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1514)
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:373)
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:358)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.sendError(HttpSolrCall.java:627)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:479)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-13 10:50:35.653 ERROR (qtp257895351-16) [   x:coretest1] o.a.s.s.HttpSolrCall null:java.io.IOException: Lexical error,   Encountered: "+" (43), after : "" at browse.vm[line 15, column 81]
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:360)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 10:50:53.439 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=0
+2017-03-13 10:50:53.446 ERROR (qtp257895351-56) [   x:coretest1] o.a.s.r.VelocityResponseWriter ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: "+" (43), after : "" at browse.vm[line 15, column 81]
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1514)
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:373)
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:358)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-13 10:50:53.448 ERROR (qtp257895351-56) [   x:coretest1] o.a.s.s.HttpSolrCall null:java.io.IOException: Lexical error,   Encountered: "+" (43), after : "" at browse.vm[line 15, column 81]
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:360)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 10:50:53.455 ERROR (qtp257895351-56) [   x:coretest1] o.a.s.r.VelocityResponseWriter ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: "+" (43), after : "" at browse.vm[line 15, column 81]
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1514)
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:373)
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:358)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.sendError(HttpSolrCall.java:627)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:479)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-13 10:50:53.456 ERROR (qtp257895351-56) [   x:coretest1] o.a.s.s.HttpSolrCall null:java.io.IOException: Lexical error,   Encountered: "+" (43), after : "" at browse.vm[line 15, column 81]
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:360)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 10:51:44.934 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=0
+2017-03-13 10:53:07.417 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=1
+2017-03-13 10:53:08.842 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why} hits=39 status=0 QTime=0
+2017-03-13 10:53:11.309 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=14
+2017-03-13 10:53:41.623 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=0
+2017-03-13 10:53:41.629 ERROR (qtp257895351-18) [   x:coretest1] o.a.s.r.VelocityResponseWriter ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: "&" (38), after : "" at browse.vm[line 15, column 81]
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1514)
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:373)
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:358)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-13 10:53:41.629 ERROR (qtp257895351-18) [   x:coretest1] o.a.s.s.HttpSolrCall null:java.io.IOException: Lexical error,   Encountered: "&" (38), after : "" at browse.vm[line 15, column 81]
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:360)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 10:53:41.638 ERROR (qtp257895351-18) [   x:coretest1] o.a.s.r.VelocityResponseWriter ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: "&" (38), after : "" at browse.vm[line 15, column 81]
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1514)
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:373)
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:358)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.sendError(HttpSolrCall.java:627)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:479)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-13 10:53:41.639 ERROR (qtp257895351-18) [   x:coretest1] o.a.s.s.HttpSolrCall null:java.io.IOException: Lexical error,   Encountered: "&" (38), after : "" at browse.vm[line 15, column 81]
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:360)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 10:53:57.150 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 10:53:57.157 ERROR (qtp257895351-55) [   x:coretest1] o.a.s.r.VelocityResponseWriter ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: "&" (38), after : "" at browse.vm[line 15, column 82]
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1514)
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:373)
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:358)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-13 10:53:57.157 ERROR (qtp257895351-55) [   x:coretest1] o.a.s.s.HttpSolrCall null:java.io.IOException: Lexical error,   Encountered: "&" (38), after : "" at browse.vm[line 15, column 82]
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:360)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 10:53:57.163 ERROR (qtp257895351-55) [   x:coretest1] o.a.s.r.VelocityResponseWriter ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Lexical error,   Encountered: "&" (38), after : "" at browse.vm[line 15, column 82]
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1514)
+	at org.apache.velocity.app.VelocityEngine.getTemplate(VelocityEngine.java:373)
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:358)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.sendError(HttpSolrCall.java:627)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:479)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-13 10:53:57.164 ERROR (qtp257895351-55) [   x:coretest1] o.a.s.s.HttpSolrCall null:java.io.IOException: Lexical error,   Encountered: "&" (38), after : "" at browse.vm[line 15, column 82]
+	at org.apache.solr.response.VelocityResponseWriter.getTemplate(VelocityResponseWriter.java:360)
+	at org.apache.solr.response.VelocityResponseWriter.write(VelocityResponseWriter.java:153)
+	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
+	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:732)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:473)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:296)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1691)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:745)
+
+2017-03-13 10:54:15.602 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 10:54:24.904 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=1
+2017-03-13 10:55:57.700 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=0
+2017-03-13 10:55:58.908 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=0
+2017-03-13 10:56:00.048 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=0
+2017-03-13 10:56:01.007 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=0
+2017-03-13 10:56:02.142 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=0
+2017-03-13 10:56:39.140 INFO  (qtp257895351-56) [   ] o.a.s.c.SolrResourceLoader [coretest1] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 10:56:39.171 INFO  (qtp257895351-56) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 10:56:39.199 INFO  (qtp257895351-56) [   ] o.a.s.s.IndexSchema [coretest1] Schema name=example-data-driven-schema
+2017-03-13 10:56:39.325 INFO  (qtp257895351-56) [   ] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 10:56:39.349 INFO  (qtp257895351-56) [   ] o.a.s.c.CoreContainer Reloading SolrCore 'coretest1' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1
+2017-03-13 10:56:39.350 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.SolrCore [[coretest1] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/data/]
+2017-03-13 10:56:39.350 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 10:56:39.353 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 10:56:39.989 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 10:56:39.989 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 10:56:39.991 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.s.SolrIndexSearcher Opening [Searcher@563aa89c[coretest1] main]
+2017-03-13 10:56:39.991 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf
+2017-03-13 10:56:39.992 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 10:56:39.992 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 10:56:39.992 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf/elevate.xml
+2017-03-13 10:56:39.997 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 10:56:39.997 INFO  (searcherExecutor-48-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@563aa89c[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 10:56:39.997 INFO  (searcherExecutor-48-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 10:56:39.997 INFO  (searcherExecutor-48-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 10:56:39.998 INFO  (searcherExecutor-48-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.SolrCore [coretest1] Registered new searcher Searcher@563aa89c[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 10:56:40.013 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-03-13 10:56:40.019 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.s.SolrIndexSearcher Opening [Searcher@133c87d6[coretest1] main]
+2017-03-13 10:56:40.021 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.SolrCore [coretest1]  CLOSING SolrCore org.apache.solr.core.SolrCore@55586db8
+2017-03-13 10:56:40.021 INFO  (searcherExecutor-48-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@133c87d6[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 10:56:40.021 INFO  (searcherExecutor-48-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 10:56:40.022 INFO  (searcherExecutor-48-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.SolrCore [coretest1] Registered new searcher Searcher@133c87d6[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 10:56:40.127 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.core.coretest1
+2017-03-13 10:56:40.127 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=coretest1&action=RELOAD} status=0 QTime=1007
+2017-03-13 10:56:52.125 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=10
+2017-03-13 10:56:52.125 INFO  (qtp257895351-50) [   x:coretest1] o.a.s.c.PluginBag Going to create a new queryResponseWriter with {type = queryResponseWriter,name = velocity,class = solr.VelocityResponseWriter,attributes = {startup=lazy, name=velocity, class=solr.VelocityResponseWriter},args = {template.base.dir=,solr.resource.loader.enabled=true,params.resource.loader.enabled=false}} 
+2017-03-13 10:57:54.923 INFO  (qtp257895351-56) [   ] o.a.s.c.SolrResourceLoader [coretest1] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 10:57:54.942 INFO  (qtp257895351-56) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 10:57:54.968 INFO  (qtp257895351-56) [   ] o.a.s.s.IndexSchema [coretest1] Schema name=example-data-driven-schema
+2017-03-13 10:57:55.072 INFO  (qtp257895351-56) [   ] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 10:57:55.085 INFO  (qtp257895351-56) [   ] o.a.s.c.CoreContainer Reloading SolrCore 'coretest1' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1
+2017-03-13 10:57:55.085 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.SolrCore [[coretest1] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/data/]
+2017-03-13 10:57:55.085 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 10:57:55.087 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 10:57:55.103 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 10:57:55.103 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 10:57:55.104 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.s.SolrIndexSearcher Opening [Searcher@6f3c321e[coretest1] main]
+2017-03-13 10:57:55.105 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf
+2017-03-13 10:57:55.105 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 10:57:55.105 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 10:57:55.106 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf/elevate.xml
+2017-03-13 10:57:55.108 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 10:57:55.109 INFO  (searcherExecutor-52-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@6f3c321e[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 10:57:55.109 INFO  (searcherExecutor-52-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 10:57:55.109 INFO  (searcherExecutor-52-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 10:57:55.110 INFO  (searcherExecutor-52-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.SolrCore [coretest1] Registered new searcher Searcher@6f3c321e[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 10:57:55.117 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-03-13 10:57:55.121 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.s.SolrIndexSearcher Opening [Searcher@64fe1bbb[coretest1] main]
+2017-03-13 10:57:55.121 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.SolrCore [coretest1]  CLOSING SolrCore org.apache.solr.core.SolrCore@4ce7ebe4
+2017-03-13 10:57:55.121 INFO  (searcherExecutor-52-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@64fe1bbb[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 10:57:55.121 INFO  (searcherExecutor-52-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 10:57:55.123 INFO  (searcherExecutor-52-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.SolrCore [coretest1] Registered new searcher Searcher@64fe1bbb[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 10:57:55.208 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.core.coretest1
+2017-03-13 10:57:55.209 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=coretest1&action=RELOAD} status=0 QTime=294
+2017-03-13 10:58:03.783 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=13
+2017-03-13 10:58:03.783 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.PluginBag Going to create a new queryResponseWriter with {type = queryResponseWriter,name = velocity,class = solr.VelocityResponseWriter,attributes = {startup=lazy, name=velocity, class=solr.VelocityResponseWriter},args = {template.base.dir=,solr.resource.loader.enabled=true,params.resource.loader.enabled=false}} 
+2017-03-13 11:02:54.981 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 11:04:05.349 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 11:07:51.362 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 11:08:31.932 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 11:08:35.165 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 11:09:05.099 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 11:09:07.101 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 11:10:24.061 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=1
+2017-03-13 11:14:20.773 INFO  (qtp257895351-55) [   ] o.a.s.c.SolrResourceLoader [coretest1] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 11:14:20.791 INFO  (qtp257895351-55) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 11:14:20.813 INFO  (qtp257895351-55) [   ] o.a.s.s.IndexSchema [coretest1] Schema name=example-data-driven-schema
+2017-03-13 11:14:20.911 INFO  (qtp257895351-55) [   ] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 11:14:20.925 INFO  (qtp257895351-55) [   ] o.a.s.c.CoreContainer Reloading SolrCore 'coretest1' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1
+2017-03-13 11:14:20.925 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.SolrCore [[coretest1] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/data/]
+2017-03-13 11:14:20.925 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 11:14:20.927 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 11:14:21.560 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 11:14:21.560 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 11:14:21.563 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.s.SolrIndexSearcher Opening [Searcher@37be1277[coretest1] main]
+2017-03-13 11:14:21.564 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf
+2017-03-13 11:14:21.564 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 11:14:21.565 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 11:14:21.565 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf/elevate.xml
+2017-03-13 11:14:21.568 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 11:14:21.568 INFO  (searcherExecutor-56-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@37be1277[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 11:14:21.568 INFO  (searcherExecutor-56-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 11:14:21.568 INFO  (searcherExecutor-56-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 11:14:21.569 INFO  (searcherExecutor-56-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.SolrCore [coretest1] Registered new searcher Searcher@37be1277[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 11:14:21.577 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-03-13 11:14:21.582 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.s.SolrIndexSearcher Opening [Searcher@54eccdda[coretest1] main]
+2017-03-13 11:14:21.582 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.SolrCore [coretest1]  CLOSING SolrCore org.apache.solr.core.SolrCore@e621a32
+2017-03-13 11:14:21.582 INFO  (searcherExecutor-56-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@54eccdda[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 11:14:21.582 INFO  (searcherExecutor-56-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 11:14:21.584 INFO  (searcherExecutor-56-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.SolrCore [coretest1] Registered new searcher Searcher@54eccdda[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 11:14:21.679 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.core.coretest1
+2017-03-13 11:14:21.680 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=coretest1&action=RELOAD} status=0 QTime=914
+2017-03-13 11:14:26.789 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=why%26fl%3DSTRAIN,SOURCE,attributes,KIND_INDICA,KIND_SATIVA,KIND_SETMANUALLY} hits=2826 status=0 QTime=10
+2017-03-13 11:14:26.789 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.PluginBag Going to create a new queryResponseWriter with {type = queryResponseWriter,name = velocity,class = solr.VelocityResponseWriter,attributes = {startup=lazy, name=velocity, class=solr.VelocityResponseWriter},args = {template.base.dir=,solr.resource.loader.enabled=true,params.resource.loader.enabled=false}} 
+2017-03-13 11:14:31.001 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=2
+2017-03-13 11:15:16.381 INFO  (qtp257895351-55) [   ] o.a.s.c.SolrResourceLoader [coretest1] Added 51 libs to classloader, from paths: [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/clustering/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/extraction/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/langid/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/contrib/velocity/lib, /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/dist]
+2017-03-13 11:15:16.397 INFO  (qtp257895351-55) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 6.4.0
+2017-03-13 11:15:16.423 INFO  (qtp257895351-55) [   ] o.a.s.s.IndexSchema [coretest1] Schema name=example-data-driven-schema
+2017-03-13 11:15:16.512 INFO  (qtp257895351-55) [   ] o.a.s.s.IndexSchema Loaded schema example-data-driven-schema/1.6 with uniqueid field id
+2017-03-13 11:15:16.526 INFO  (qtp257895351-55) [   ] o.a.s.c.CoreContainer Reloading SolrCore 'coretest1' using configuration from instancedir /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1
+2017-03-13 11:15:16.526 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.SolrCore [[coretest1] ] Opening new SolrCore at [/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1], dataDir=[/Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/data/]
+2017-03-13 11:15:16.526 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.JmxMonitoredMap JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@77eca502
+2017-03-13 11:15:16.527 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2017-03-13 11:15:16.538 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2017-03-13 11:15:16.539 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2017-03-13 11:15:16.539 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.s.SolrIndexSearcher Opening [Searcher@2076a0e4[coretest1] main]
+2017-03-13 11:15:16.540 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf
+2017-03-13 11:15:16.540 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2017-03-13 11:15:16.540 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2017-03-13 11:15:16.540 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.h.c.QueryElevationComponent Loading QueryElevation from: /Users/haleighwright/desktop/w17/293s-ours/data_consol/Resources/solr-6.4.0/server/solr/coretest1/conf/elevate.xml
+2017-03-13 11:15:16.542 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.h.ReplicationHandler Commits will be reserved for  10000
+2017-03-13 11:15:16.543 INFO  (searcherExecutor-60-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@2076a0e4[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 11:15:16.543 INFO  (searcherExecutor-60-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 11:15:16.543 INFO  (searcherExecutor-60-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2017-03-13 11:15:16.543 INFO  (searcherExecutor-60-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.SolrCore [coretest1] Registered new searcher Searcher@2076a0e4[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 11:15:16.550 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2017-03-13 11:15:16.553 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.s.SolrIndexSearcher Opening [Searcher@66078ab3[coretest1] main]
+2017-03-13 11:15:16.554 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.SolrCore [coretest1]  CLOSING SolrCore org.apache.solr.core.SolrCore@641fd7df
+2017-03-13 11:15:16.554 INFO  (searcherExecutor-60-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@66078ab3[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 11:15:16.554 INFO  (searcherExecutor-60-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2017-03-13 11:15:16.555 INFO  (searcherExecutor-60-thread-1-processing-x:coretest1) [   x:coretest1] o.a.s.c.SolrCore [coretest1] Registered new searcher Searcher@66078ab3[coretest1] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(6.4.0):C262) Uninverting(_1(6.4.0):C5449)))}
+2017-03-13 11:15:16.637 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.m.SolrMetricManager Closing metric reporters for: solr.core.coretest1
+2017-03-13 11:15:16.637 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=coretest1&action=RELOAD} status=0 QTime=262
+2017-03-13 11:15:28.574 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=12
+2017-03-13 11:15:28.574 INFO  (qtp257895351-16) [   x:coretest1] o.a.s.c.PluginBag Going to create a new queryResponseWriter with {type = queryResponseWriter,name = velocity,class = solr.VelocityResponseWriter,attributes = {startup=lazy, name=velocity, class=solr.VelocityResponseWriter},args = {template.base.dir=,solr.resource.loader.enabled=true,params.resource.loader.enabled=false}} 
+2017-03-13 11:15:30.635 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=1
+2017-03-13 11:15:31.565 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/browse params={q=bb} hits=1 status=0 QTime=1
+2017-03-13 11:15:54.310 INFO  (qtp257895351-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489403754059} status=0 QTime=0
+2017-03-13 11:15:54.334 INFO  (qtp257895351-57) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=23
+2017-03-13 11:15:54.334 INFO  (qtp257895351-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=22
+2017-03-13 11:15:56.315 INFO  (qtp257895351-57) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489403754059} status=0 QTime=0
+2017-03-13 11:15:56.317 INFO  (qtp257895351-71) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1489403756300} status=0 QTime=0
+2017-03-13 11:15:56.329 INFO  (qtp257895351-52) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=13
+2017-03-13 11:15:56.330 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1489403754060&ts=1489403754060} status=503 QTime=0
+2017-03-13 11:15:56.331 INFO  (qtp257895351-19) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/replication params={wt=json&command=details&_=1489403756301} status=0 QTime=0
+2017-03-13 11:15:56.343 INFO  (qtp257895351-14) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/system params={wt=json&_=1489403756301} status=0 QTime=12
+2017-03-13 11:15:58.568 INFO  (qtp257895351-57) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489403754059} status=0 QTime=0
+2017-03-13 11:15:58.583 INFO  (qtp257895351-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=14
+2017-03-13 11:15:58.586 INFO  (qtp257895351-70) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/config params={wt=json&_=1489403758493} status=0 QTime=0
+2017-03-13 11:15:58.588 INFO  (qtp257895351-71) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1489403756300} status=0 QTime=2
+2017-03-13 11:15:58.767 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1489403756300} status=0 QTime=3
+2017-03-13 11:16:03.365 INFO  (qtp257895351-71) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1489403756300} status=0 QTime=1
+2017-03-13 11:16:03.467 INFO  (qtp257895351-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489403754059} status=0 QTime=0
+2017-03-13 11:16:03.468 INFO  (qtp257895351-52) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/config params={wt=json&_=1489403758493} status=0 QTime=0
+2017-03-13 11:16:03.481 INFO  (qtp257895351-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=13
+2017-03-13 11:16:03.484 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1489403756300} status=0 QTime=2
+2017-03-13 11:16:10.715 INFO  (qtp257895351-55) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489403754059} status=0 QTime=0
+2017-03-13 11:16:10.727 INFO  (qtp257895351-70) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=11
+2017-03-13 11:16:10.729 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/config params={wt=json&_=1489403758493} status=0 QTime=0
+2017-03-13 11:16:10.730 INFO  (qtp257895351-14) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1489403756300} status=0 QTime=2
+2017-03-13 11:16:10.833 INFO  (qtp257895351-19) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1489403756300} status=0 QTime=2
+2017-03-13 11:16:17.495 INFO  (qtp257895351-56) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489403754059} status=0 QTime=0
+2017-03-13 11:16:17.509 INFO  (qtp257895351-52) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=12
+2017-03-13 11:16:17.510 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/config params={wt=json&_=1489403758493} status=0 QTime=0
+2017-03-13 11:16:17.511 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1489403756300} status=0 QTime=1
+2017-03-13 11:16:17.618 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1489403756300} status=0 QTime=2
+2017-03-13 11:16:24.854 INFO  (qtp257895351-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489403754059} status=0 QTime=0
+2017-03-13 11:16:24.866 INFO  (qtp257895351-70) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=11
+2017-03-13 11:16:24.868 INFO  (qtp257895351-14) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/config params={wt=json&_=1489403758493} status=0 QTime=0
+2017-03-13 11:16:24.869 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1489403756300} status=0 QTime=1
+2017-03-13 11:16:24.975 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1489403756300} status=0 QTime=3
+2017-03-13 11:16:29.680 INFO  (qtp257895351-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489403754059} status=0 QTime=0
+2017-03-13 11:16:29.692 INFO  (qtp257895351-52) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=11
+2017-03-13 11:16:29.694 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/config params={wt=json&_=1489403758493} status=0 QTime=0
+2017-03-13 11:16:29.695 INFO  (qtp257895351-19) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1489403756300} status=0 QTime=1
+2017-03-13 11:16:29.799 INFO  (qtp257895351-14) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1489403756300} status=0 QTime=2
+2017-03-13 11:16:32.841 INFO  (qtp257895351-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1489403754059} status=0 QTime=0
+2017-03-13 11:16:32.854 INFO  (qtp257895351-70) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1489403754060} status=0 QTime=12
+2017-03-13 11:16:37.754 INFO  (qtp257895351-19) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={q=*:*&hl=on&indent=on&wt=json&_=1489403792746} hits=5711 status=0 QTime=2
+2017-03-13 11:16:49.858 INFO  (qtp257895351-18) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={q=bb&hl=on&indent=on&wt=json&_=1489403792746} hits=1 status=0 QTime=1
+2017-03-13 11:17:12.194 INFO  (qtp257895351-55) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={q=king&hl=on&indent=on&wt=json&_=1489403792746} hits=37 status=0 QTime=14
+2017-03-13 11:18:59.759 INFO  (qtp257895351-56) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={q=king&hl=on&indent=on&wt=json&_=1489403792746} hits=37 status=0 QTime=0
+2017-03-13 11:19:07.527 INFO  (qtp257895351-57) [   x:coretest1] o.a.s.c.S.Request [coretest1]  webapp=/solr path=/select params={q=king&hl=on&indent=on&wt=json&_=1489403792746} hits=37 status=0 QTime=0

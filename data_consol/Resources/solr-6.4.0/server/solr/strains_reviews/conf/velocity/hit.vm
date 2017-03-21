@@ -1,0 +1,59 @@
+#set($docId = $doc.getFirstValue($request.schema.uniqueKeyField.name))
+
+
+<div class="result-document">
+
+  <table>
+  <font size="10">Suggested Strain: <strong> $esc.html($doc.STRAIN).replace('[','').replace(']','')</strong></font>
+    <tr>
+    <th align="right" valign="top" style="field-name">
+      Description: 
+      </th>
+      <td align="left" valign="top">
+
+      #set($pad = $esc.html($doc.BODY).replace('[','').replace(']',''))
+      #foreach($v in $response.highlighting.get($doc.id).get("BODY"))
+        #set($temp = $esc.html($v.replace("<em>","").replace("</em>","")))
+        #set($pad = $pad.replace($temp, $v))
+      #end
+    
+      #if ($pad)
+       $pad
+      #end
+      </td>
+      </tr>
+      <tr>
+    <th align="right" valign="top" style="field-name">
+      Attributes: 
+      </th>
+      <td align="left" valign="top">
+      #set($pad = $esc.html($doc.attributes).replace('[','').replace(']',''))
+      #foreach($v in $response.highlighting.get($doc.id).get("attributes"))
+        #set($temp = $esc.html($v.replace("<em>","").replace("</em>","")))
+        #set($pad = $pad.replace($temp, $v))
+      #end
+      #if ($pad)
+        $pad
+      #end
+      </td>
+      </tr>
+      <tr>
+    <th align="right" valign="top" style="field-name">
+      Search Result Score: 
+      </th>
+
+      <td align="left" valign="top">
+      $esc.html($doc.score).replace('[','').replace(']','')
+      </td>
+    </tr>
+  </table>
+
+  #if($debug)
+    <a href="#" onclick='jQuery(this).siblings("pre").toggle(); return false;'>toggle explain</a>
+
+    <pre style="display:none">
+      $response.getExplainMap().get($docId)
+    </pre>
+  #end
+</div>
+
