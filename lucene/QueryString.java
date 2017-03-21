@@ -10,8 +10,10 @@ import java.nio.file.*;
 import java.nio.file.*;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Arrays;
 import java.util.Set;
 import java.util.Scanner;
+import java.util.ArrayList;
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.core.StopFilter;
 import org.apache.lucene.analysis.en.EnglishAnalyzer;
@@ -29,6 +31,7 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.queryparser.classic.*;
 import org.apache.lucene.search.*;
 import org.apache.lucene.search.IndexSearcher;
@@ -96,6 +99,18 @@ public class QueryString {
 		return sb.toString();
 	}
 
+	public static boolean entireWord(String tmp, int index, String strain) {
+		// System.out.println("strain is " + strain);
+		// System.out.println("tmp is |" + tmp + "| and index is " + Integer.toString(index));
+		if(index != 0)
+			if(!(tmp.charAt(index - 1) == ' ')) return false;
+		if(index + strain.length() - 1 < tmp.length() - 1) {
+			if(!(tmp.charAt(index + strain.length()) == ' ')) return false;
+		}
+		else return false;
+		// System.out.println("returning true");
+		return true;
+	}
 	public static void main(String[] args) throws IOException, ParseException {
 		int NUM_FILES = args.length > 1 ? Integer.parseInt(args[1]) : 100;
 
@@ -117,14 +132,13 @@ public class QueryString {
 		int fieldCode = 1;
 		// sc.nextLine();
 		Query q;
-		BooleanQuery.Builder totalQuery = new BooleanQuery.Builder();
 		MultiFieldQueryParser conjunctiveParser;
 		QueryParser queryParser;
 		IndexReader reader = null;
 		JSONObject o;
 		JSONParser parser = new JSONParser();
 		try{
-            o = (JSONObject)parser.parse(new FileReader("consol_strains.json"));
+            o = (JSONObject)parser.parse(new FileReader("../data_consol/consol_strains-5.json"));
         } catch(Exception e) {
             e.printStackTrace();
             return;
@@ -135,7 +149,8 @@ public class QueryString {
         String oldQuery;
         String oldQueryStopRemoved;
 
-        Set<String> strains = o.keySet();
+        ArrayList<String> strains = new ArrayList<String>(o.keySet());
+        // ArrayList.sort(strains, java.util.Comparator);
         // System.out.println(strains);
 		while(!querystr.equals("exit")) {
 			System.out.println("Please Enter a query String!\n\n\n\n");
@@ -143,8 +158,11 @@ public class QueryString {
 			querystr = removeStopWordsAndStem(oldQuery, false);
 			oldQueryStopRemoved = removeStopWordsAndStem(oldQuery, false);
 
+			oldQueryStopRemoved.replaceAll("( )+", " ");
+
 			System.out.println("\n");
 			System.out.println("Your Query: " + oldQuery);
+			System.out.println("Stop Word Removal Query: " + oldQueryStopRemoved);
 
 			// if(fieldCode==1){
 			// 	queryParser = new QueryParser("both", analyzer).parse(querystr);
@@ -170,35 +188,65 @@ public class QueryString {
 			boosts.put("body_stem", 1f);
 
 			int j= 0;
+			BooleanQuery.Builder totalQuery = new BooleanQuery.Builder();
+			ArrayList<String> totalQueryStrings = new ArrayList<String>();
 
 			String tmp = oldQueryStopRemoved;
 			for(String strain : strains) {
-				if(tmp.contains(strain)) {
+				int ind = tmp.indexOf(strain);
+				if((ind >= 0) && entireWord(tmp, ind, strain)) {
+					System.out.println("strain is " + strain);
+					System.out.println("here");
 					tmp = tmp.replace(strain, "");
-					conjunctiveParser = new MultiFieldQueryParser(fields, analyzer, boosts);
-					conjunctiveParser.setDefaultOperator(QueryParser.Operator.AND);
-		    		q = conjunctiveParser.parse(strain);
-					BoostQuery boost = new BoostQuery(q, 0.8f);
+					// conjunctiveParser = new MultiFieldQueryParser(fields, analyzer, boosts);
+					// conjunctiveParser.setDefaultOperator(QueryParser.Operator.AND);
+		   //  		q = conjunctiveParser.parse(strain);
+		    		totalQueryStrings.add(strain);
+
+		    		PhraseQuery.Builder quer = new PhraseQuery.Builder();
+
+					String[] words = strain.split(" ");
+					int asd = 0;
+					System.out.println("words is " + words);
+					for (String word : words) {
+						System.out.println("adding " + word);
+					    quer.add(new Term("title", word), asd++);
+					}
+
+					BoostQuery boost = new BoostQuery(quer.build(), 0.8f);
 					totalQuery.add(boost, Occur.MUST);
-					// System.out.println("Query " + Integer.toString(j) + ": " + strain);
+					System.out.println("Query " + Integer.toString(j) + ": " + strain);
 					j++;
 				}
 			}
     		// System.out.println("Query " + Integer.toString(j) + ": " + tmp);
     		//if no strain, just do it normally
     		if(!tmp.trim().equals("")) {
+    			System.out.println("here");
     			conjunctiveParser = new MultiFieldQueryParser(fields, analyzer);
     			conjunctiveParser.setDefaultOperator(QueryParser.Operator.OR);
     			q = conjunctiveParser.parse(tmp);
     			BoostQuery boost = new BoostQuery(q, 0.1f);
     			totalQuery.add(boost, Occur.SHOULD);
+    			totalQueryStrings.add(tmp);
+    		} else {
+    			if (oldQuery.trim() == "") {
+    				System.out.println("enter something valid plz \n");
+    				continue;
+    			}
     		}
+
+    		System.out.println("Query Terms Split:");
+    		int it = 0;
+    		for (String ter: totalQueryStrings) {
+    			System.out.println("\t\033[1;31mQuery" + it + ": " + ter + "\033[0m");
+    			it++;
+    		}
+    		System.out.println("\n");
 
 			int hitsPerPage = 10;
 			reader = DirectoryReader.open(index);
 			IndexSearcher searcher = new IndexSearcher(reader);
-			
-			
 
 
 			TopDocs docs = searcher.search(totalQuery.build(), hitsPerPage);
@@ -213,16 +261,24 @@ public class QueryString {
 				String formattedTitle = d.get("title");
 				String formattedBody = d.get("body");
 
-				String[] l;
-				if(oldQueryStopRemoved.contains(" "))
-					l = oldQueryStopRemoved.split(" ");
-				else {
-					l = new String[1];
-					l[0] = oldQueryStopRemoved;
-				}
-				for(String s : l) {
-					formattedTitle = formattedTitle.replaceAll("((?i)" + s + ")", "\033[1;31m" + "$1" + "\033[0m");
-					formattedBody = formattedBody.replaceAll("((?i)" + s + ")", "\033[1;31m" + "$1" + "\033[0m");
+				for(String s : totalQueryStrings) {	
+					ArrayList<String> k = new ArrayList();
+
+					if(!strains.contains(s.trim()) && s.contains(" ")) {
+						k = new ArrayList(Arrays.asList(s.split(" ")));
+					} else {
+						k.add(s);
+					}
+					for(String a : k) {
+						a = a.trim();
+						if(!a.equals("")){
+							// System.out.println("a is " + a);
+							formattedTitle = formattedTitle.replaceAll("((?i)" + a + ")", "\033[1;32m" + "$1" + "\033[0m");
+							formattedBody = formattedBody.replaceAll("((?i)" + a + ")", "\033[1;32m" + "$1" + "\033[0m");
+						}
+					}
+					
+					
 				}
 
 
