@@ -41,3 +41,7 @@ The nlp directory contains a Python script to summarize some text.
 The sklearn directory contains several scripts to cluster our strains (we tried both hierarchical and kmeans)
 
 The tensorflow directory contains the code we used for calculating term similarities (synonyms within our strain description and reviews)
+
+# General Notes
+
+Our project has many individual components which were meant to be run separately. Many of our scripts generate output files, which are then used as input for other scripts and so on. There is also a lot of code that can be invoked separately, as utility functions.
