@@ -31,6 +31,7 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.queryparser.classic.*;
 import org.apache.lucene.search.*;
 import org.apache.lucene.search.IndexSearcher;
@@ -98,6 +99,18 @@ public class QueryString {
 		return sb.toString();
 	}
 
+	public static boolean entireWord(String tmp, int index, String strain) {
+		// System.out.println("strain is " + strain);
+		// System.out.println("tmp is |" + tmp + "| and index is " + Integer.toString(index));
+		if(index != 0)
+			if(!(tmp.charAt(index - 1) == ' ')) return false;
+		if(index + strain.length() - 1 < tmp.length() - 1) {
+			if(!(tmp.charAt(index + strain.length()) == ' ')) return false;
+		}
+		else return false;
+		// System.out.println("returning true");
+		return true;
+	}
 	public static void main(String[] args) throws IOException, ParseException {
 		int NUM_FILES = args.length > 1 ? Integer.parseInt(args[1]) : 100;
 
@@ -125,7 +138,7 @@ public class QueryString {
 		JSONObject o;
 		JSONParser parser = new JSONParser();
 		try{
-            o = (JSONObject)parser.parse(new FileReader("consol_strains.json"));
+            o = (JSONObject)parser.parse(new FileReader("../data_consol/consol_strains-5.json"));
         } catch(Exception e) {
             e.printStackTrace();
             return;
@@ -136,7 +149,8 @@ public class QueryString {
         String oldQuery;
         String oldQueryStopRemoved;
 
-        Set<String> strains = o.keySet();
+        ArrayList<String> strains = new ArrayList<String>(o.keySet());
+        // ArrayList.sort(strains, java.util.Comparator);
         // System.out.println(strains);
 		while(!querystr.equals("exit")) {
 			System.out.println("Please Enter a query String!\n\n\n\n");
@@ -179,21 +193,36 @@ public class QueryString {
 
 			String tmp = oldQueryStopRemoved;
 			for(String strain : strains) {
-				if(tmp.contains(strain)) {
+				int ind = tmp.indexOf(strain);
+				if((ind >= 0) && entireWord(tmp, ind, strain)) {
+					System.out.println("strain is " + strain);
+					System.out.println("here");
 					tmp = tmp.replace(strain, "");
-					conjunctiveParser = new MultiFieldQueryParser(fields, analyzer, boosts);
-					conjunctiveParser.setDefaultOperator(QueryParser.Operator.AND);
-		    		q = conjunctiveParser.parse(strain);
+					// conjunctiveParser = new MultiFieldQueryParser(fields, analyzer, boosts);
+					// conjunctiveParser.setDefaultOperator(QueryParser.Operator.AND);
+		   //  		q = conjunctiveParser.parse(strain);
 		    		totalQueryStrings.add(strain);
-					BoostQuery boost = new BoostQuery(q, 0.8f);
+
+		    		PhraseQuery.Builder quer = new PhraseQuery.Builder();
+
+					String[] words = strain.split(" ");
+					int asd = 0;
+					System.out.println("words is " + words);
+					for (String word : words) {
+						System.out.println("adding " + word);
+					    quer.add(new Term("title", word), asd++);
+					}
+
+					BoostQuery boost = new BoostQuery(quer.build(), 0.8f);
 					totalQuery.add(boost, Occur.MUST);
-					// System.out.println("Query " + Integer.toString(j) + ": " + strain);
+					System.out.println("Query " + Integer.toString(j) + ": " + strain);
 					j++;
 				}
 			}
     		// System.out.println("Query " + Integer.toString(j) + ": " + tmp);
     		//if no strain, just do it normally
     		if(!tmp.trim().equals("")) {
+    			System.out.println("here");
     			conjunctiveParser = new MultiFieldQueryParser(fields, analyzer);
     			conjunctiveParser.setDefaultOperator(QueryParser.Operator.OR);
     			q = conjunctiveParser.parse(tmp);
@@ -235,8 +264,7 @@ public class QueryString {
 				for(String s : totalQueryStrings) {	
 					ArrayList<String> k = new ArrayList();
 
-					// System.out.println("s is " + s);
-					if(!strains.contains(s) && s.contains(" ")) {
+					if(!strains.contains(s.trim()) && s.contains(" ")) {
 						k = new ArrayList(Arrays.asList(s.split(" ")));
 					} else {
 						k.add(s);
