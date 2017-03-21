@@ -32,7 +32,9 @@ We also have a script in here to calculate the "true" rating for a particular st
 
 Our data analysis code can be found in the following directories:
 
-nlp, sklearn, tensorflow
+nlp, sklearn, tensorflow, data_consol
+
+The data_consol directory contains code to calculate similarity between strain descriptions.
 
 The nlp directory contains a Python script to summarize some text.
 
